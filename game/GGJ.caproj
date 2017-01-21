@@ -10,6 +10,7 @@
     <unique-id>1bsnbr6s1m559</unique-id>
     <saved-with-version>24100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -58,6 +59,12 @@
             <object-type name="Touch" sid="501075954480452">
                 <plugin id="Touch" />
             </object-type>
+            <object-type global="1" name="arControl" sid="408288277314519">
+                <plugin id="Arr" />
+                <instance-variables>
+                    <instance-variable name="MAX_SCORE" sid="512259079582360" type="number" />
+                </instance-variables>
+            </object-type>
         </object-folder>
         <object-folder name="Player">
             <object-type name="spPlayer" sid="101086059513427">
@@ -71,13 +78,19 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="6" loop="0" name="ALIVE" pingpong="0" repeatcount="1" repeatto="0" sid="347660942474566" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.525424" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.661017" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.610169" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.610169" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.610169" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.610169" />
+                    <animation framecount="1" loop="0" name="ALIVE" pingpong="0" repeatcount="1" repeatto="0" sid="347660942474566" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.609649" original-source="G:\SPLIT_FALT.png">
+                            <collision-poly>
+                                <point x="0.433071" y="0.361842" />
+                                <point x="0.498688" y="0.0153509" />
+                                <point x="0.800525" y="0.166667" />
+                                <point x="0.958005" y="0.5" />
+                                <point x="0.519685" y="0.598684" />
+                                <point x="0.498688" y="1" />
+                                <point x="0.181102" y="0.848684" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="3" loop="1" name="DEAD" pingpong="0" repeatcount="1" repeatto="0" sid="634342169996715" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.61194" />
@@ -180,7 +193,26 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spPause" sid="680004046247218">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591043279104737" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
+        <object-type name="txPaused" sid="821439722708067">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="521092021907881">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756463247290399" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\river_bg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
