@@ -206,17 +206,6 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="txPaused" sid="821439722708067">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Sprite" sid="521092021907881">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756463247290399" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\river_bg.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-folder name="Menu">
             <object-type name="sfSplash" sid="593369521608696">
                 <plugin id="Spritefont2" />
@@ -267,7 +256,18 @@
             <object-type name="Audio" sid="365270198541095">
                 <plugin id="Audio" />
             </object-type>
-    </object-folder>
+        </object-folder>
+        <object-type name="txPaused" sid="821439722708067">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="521092021907881">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756463247290399" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\river_bg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
@@ -286,14 +286,14 @@
         <event-sheet>EVENT_MENU.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="20" />
-        <global-instance type="Touch" uid="21">
+        <global-instance type="Mouse" uid="24" />
+        <global-instance type="Touch" uid="25">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="10" />
-        <global-instance type="Audio" uid="23">
+        <global-instance type="Keyboard" uid="26" />
+        <global-instance type="Audio" uid="27">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>

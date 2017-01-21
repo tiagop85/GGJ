@@ -35,56 +35,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block disabled="1" sid="171400715465716">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="219661000241956" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="165227961204902" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_PAUSE_ON</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="914596929215494" type="txPaused">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="991346512186625" type="System">
-                            <param id="0" name="Time scale">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="473002673247838">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="992423651702075" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="793091282827587">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="220522609826321" type="System">
-                                    <param id="0" name="Variable">GAME_STATUS</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">CT_GAME_STATUS_PAUSE_ON</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="527727729227963" type="System">
-                                    <param id="0" name="Variable">GAME_STATUS</param>
-                                    <param id="1" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="168295481053167" type="txPaused">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-13" name="Set time scale" sid="430040056815571" type="System">
-                                    <param id="0" name="Time scale">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="119704563744042">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="341516886036938" type="System">
@@ -117,9 +67,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="886441877543565" type="txPaused">
                             <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="762848386708778" type="System">
-                            <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="-13" name="Set time scale" sid="522680909867196" type="System">
                             <param id="0" name="Time scale">1</param>
@@ -262,32 +209,6 @@
                                 <action id="-21" name="Reset global variables" sid="121990215094088" type="System" />
                                 <action id="-26" name="Restart layout" sid="524996617896025" type="System" />
                             </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="400402003458980">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="991260435234283" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="209865460920179">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="613998793354915" type="System">
-                                            <param id="0" name="Variable">GAME_STATUS</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="407872629998991" type="System">
-                                            <param id="0" name="Variable">GAME_STATUS</param>
-                                            <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="744909128315270" type="System">
-                                            <param id="0" name="Seconds">0.25</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
