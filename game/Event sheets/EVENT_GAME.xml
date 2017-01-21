@@ -16,8 +16,9 @@
         <variable constant="0" name="TRASH_INI_Y3" sid="531227672199426" static="0" type="number">348</variable>
         <variable constant="0" name="GAME_STATUS" sid="386075056578448" static="0" type="number">0</variable>
         <variable constant="1" name="CT_GAME_STATUS_PLAY" sid="511834649398554" static="0" type="number">0</variable>
-        <variable constant="1" name="CT_GAME_STATUS_STUCK" sid="217181572695629" static="0" type="number">1</variable>
-        <variable constant="1" name="CT_GAME_STATUS_GAMEOVER" sid="418438145189092" static="0" type="number">2</variable>
+        <variable constant="1" name="CT_GAME_STATUS_STUCK_TRASH" sid="217181572695629" static="0" type="number">1</variable>
+        <variable constant="1" name="CT_GAME_STATUS_STUCK_SAND" sid="560009194766604" static="0" type="number">2</variable>
+        <variable constant="1" name="CT_GAME_STATUS_GAMEOVER" sid="418438145189092" static="0" type="number">3</variable>
         <variable constant="0" name="WAY" sid="665770137775048" static="0" type="number">0</variable>
         <variable constant="0" name="WAVE_STATUS_TIMER" sid="691847155443226" static="0" type="number">0</variable>
         <variable constant="1" name="CT_WAVE_STATUS_SPAWNED" sid="683055582700341" static="0" type="number">2</variable>
@@ -136,12 +137,44 @@
                     <conditions>
                         <condition id="-22" name="Else" sid="226725707074589" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="873924479575768" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_STUCK</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="821336057702649">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="688360535447677" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="866786180424551" type="spPlayer">
+                                    <param id="0" name="Object">spSand</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="393015270214419" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Value">CT_GAME_STATUS_STUCK_SAND</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="390706319563158" type="txGameOver">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="349889454412253" type="spRightWay">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="457528491299612" type="spWave">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="839819426896023" type="spTrash">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="608891045423977" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-21" name="Reset global variables" sid="121990215094088" type="System" />
+                                <action id="-26" name="Restart layout" sid="524996617896025" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="398578485316106">
                     <conditions>
@@ -347,7 +380,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="250897667366975" type="System">
                             <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_STUCK</param>
+                            <param id="1" name="Value">CT_GAME_STATUS_STUCK_TRASH</param>
                         </action>
                         <action id="-15" name="Set visible" sid="304201713912522" type="spRightWay">
                             <param id="0" name="Visibility">0</param>
@@ -368,36 +401,6 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="840506498413095">
-                    <conditions>
-                        <condition id="-19" name="On destroyed" sid="904456542653752" type="spWave" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="164207620997411">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="416694077022338" type="System">
-                                    <param id="0" name="Variable">GAME_STATUS</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="705617371821883" type="System">
-                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
-                                    <param id="1" name="Value">-1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="398871232867338" type="spWave">
-                                    <param id="0" name="Instance variable">TIMER_ON</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="937373804424897" type="spRightWay">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="105897722065788">
                     <conditions>
@@ -433,47 +436,94 @@
                             <param id="0" name="Tag">&quot;stopped&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="904201557375170" type="spWave">
-                            <param id="0" name="Speed">SPEED_WAVE_2</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="523454050342954" type="spTrash">
-                            <param id="0" name="Speed">spWave.Bullet.Speed</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="837974606743201" type="spTrash">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action behavior="Bullet" id="1" name="Set acceleration" sid="825249943378090" type="spTrash">
-                            <param id="0" name="Acceleration">spWave.Bullet.Acceleration</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="274262588745116" type="spTrash">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="686762706675332" type="spWave">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="233856876039571">
+                        <event-block any="1" sid="724471898827909">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="437322383734683" type="System">
+                                <condition id="-14" name="Compare variable" sid="371749324881259" type="System">
                                     <param id="0" name="Variable">GAME_STATUS</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">CT_GAME_STATUS_STUCK</param>
+                                    <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="523531890783414" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CT_GAME_STATUS_STUCK_TRASH</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="250382004789746" type="spPlayer">
+                                <action behavior="Bullet" id="0" name="Set speed" sid="248416058602712" type="spWave">
+                                    <param id="0" name="Speed">SPEED_WAVE_2</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="615498964380983" type="spTrash">
                                     <param id="0" name="Speed">spWave.Bullet.Speed</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="372580427811971" type="spPlayer">
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="870299924186344" type="spTrash">
                                     <param id="0" name="Angle">0</param>
                                 </action>
-                                <action behavior="Bullet" id="1" name="Set acceleration" sid="603340962748285" type="spPlayer">
+                                <action behavior="Bullet" id="1" name="Set acceleration" sid="709029549367136" type="spTrash">
                                     <param id="0" name="Acceleration">spWave.Bullet.Acceleration</param>
                                 </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="590814079186201" type="spPlayer">
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="698147776767980" type="spTrash">
                                     <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="414117760321500" type="spWave">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="233856876039571">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="437322383734683" type="System">
+                                            <param id="0" name="Variable">GAME_STATUS</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CT_GAME_STATUS_STUCK_TRASH</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="250382004789746" type="spPlayer">
+                                            <param id="0" name="Speed">spWave.Bullet.Speed</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="372580427811971" type="spPlayer">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action behavior="Bullet" id="1" name="Set acceleration" sid="603340962748285" type="spPlayer">
+                                            <param id="0" name="Acceleration">spWave.Bullet.Acceleration</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="590814079186201" type="spPlayer">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="840506498413095">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="904456542653752" type="spWave" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="164207620997411">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="416694077022338" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="705617371821883" type="System">
+                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="398871232867338" type="spWave">
+                                    <param id="0" name="Instance variable">TIMER_ON</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="937373804424897" type="spRightWay">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
