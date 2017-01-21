@@ -218,7 +218,7 @@
         </global-instance>
     </global-instances>
     <sounds-folder>
-        <file name="sinkWater3.ogg" />
+        <file name="paddle.ogg" />
         <file name="stream.m4a" />
         <file name="stream.ogg" />
         <file name="Tidal Wave.m4a" />
