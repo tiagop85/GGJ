@@ -2,5 +2,65 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EVENT_MENU</name>
-    <events />
+    <events>
+        <event-block sid="447599087558200">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="491309853775135" type="sfSplash" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="851834901561181" type="System">
+                    <param id="0" name="Layout">&quot;MAIN&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="521191151750074" title="Button Manager">
+            <sub-events>
+                <event-block sid="614110545978925">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="974991489987051" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="684219105695750" type="allButtons" />
+                    </actions>
+                </event-block>
+                <event-block any="1" disabled="1" sid="506539070278789">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="708746188960542" type="Touch">
+                            <param id="0" name="Object">allButtons</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="615072466450698">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="355111372572486" type="Touch">
+                            <param id="0" name="Object">allButtons</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="218159322200831" type="allButtons">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="966782630826779">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="982628920148106" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="938190193447058" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="353030187012986" type="allButtons">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
