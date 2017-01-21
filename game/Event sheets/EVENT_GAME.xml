@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EVENT_GAME</name>
     <events>
-        <include>EVENT_MENU</include>
         <variable constant="0" name="SPEED_PLAYER" sid="460587208817183" static="0" type="number">6</variable>
         <variable constant="0" name="SPEED_WAVE1" sid="328454233105574" static="0" type="number">25</variable>
         <variable constant="0" name="SPEED_WAVE_2" sid="495390608239009" static="0" type="number">600</variable>
@@ -27,6 +26,7 @@
         <variable constant="0" name="IS_PADDLE_PLAYING" sid="902972200941605" static="0" type="number">0</variable>
         <variable constant="1" name="CT_WAVE_STATUS_SPAWNED" sid="683055582700341" static="0" type="number">2</variable>
         <variable constant="0" name="GAME_SCORE" sid="792835554555321" static="0" type="number">0</variable>
+        <variable constant="0" name="TIME_SCALE_NORMAL" sid="982606028970652" static="0" type="number">1</variable>
         <event-block sid="419656281825390">
             <conditions>
                 <condition id="3" name="On touched object" sid="687126697262572" type="Touch">
@@ -40,7 +40,7 @@
                         <condition id="-8" name="Compare two values" sid="341516886036938" type="System">
                             <param id="0" name="First value">timescale</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
+                            <param id="2" name="Second value">TIME_SCALE_NORMAL</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -69,7 +69,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-13" name="Set time scale" sid="522680909867196" type="System">
-                            <param id="0" name="Time scale">1</param>
+                            <param id="0" name="Time scale">TIME_SCALE_NORMAL</param>
                         </action>
                         <action id="-9" name="Set value" sid="320264047749877" type="System">
                             <param id="0" name="Variable">GAME_STATUS</param>
@@ -94,7 +94,7 @@
                         <condition id="-8" name="Compare two values" sid="266872384111648" type="System">
                             <param id="0" name="First value">timescale</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
+                            <param id="2" name="Second value">TIME_SCALE_NORMAL</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -235,39 +235,6 @@
         </event-group>
         <event-group description="" sid="941449335778710" title="Level Manager">
             <sub-events>
-                <event-block sid="240891354757519">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="328069706569412" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="262833291885876" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block any="1" sid="892889266786768">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="270016782730186" type="spWave">
-                                    <param id="0" name="Instance variable">TIMER_ON</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="841891620537348" type="System">
-                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="362560000841425" type="System">
-                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>&gt; WAVE SPAWN</comment>
                 <event-block sid="180332426369445">
                     <conditions>
@@ -281,6 +248,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="178754538771413" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="967764528325398" type="System">
@@ -292,9 +264,6 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-20</param>
                             <param id="1" name="Tag (optional)">&quot;WAVE&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="422077662225955" type="System">
-                            <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="-3" name="Create object" sid="378597660502461" type="System">
                             <param id="0" name="Object to create">spWave</param>
@@ -637,6 +606,7 @@
                 <condition id="-2" name="On start of layout" sid="812900581456495" type="System" />
             </conditions>
             <actions>
+                <action id="-21" name="Reset global variables" sid="343552588766687" type="System" />
                 <action id="0" name="Set text" sid="954630917841104" type="txScore">
                     <param id="0" name="Text">GAME_SCORE</param>
                 </action>
@@ -655,7 +625,63 @@
                     <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
                     <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
                 </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="177485456624378" type="spTimer">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;GameStarted&quot;</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="169345074389759">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="364796060818553" type="System">
+                            <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                            <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="586154680784910">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="845605975286608" type="spTimer">
+                    <param id="0" name="Tag">&quot;GameStarted&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="582929378928205">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="383298740358123" type="System">
+                            <param id="0" name="Variable">GAME_STATUS</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="522083148036485">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="769715198076568" type="spWave">
+                                    <param id="0" name="Instance variable">TIMER_ON</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="376400242354547" type="System">
+                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="207210375768325" type="System">
+                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="159158950411524" title="Sound">
             <sub-events>
