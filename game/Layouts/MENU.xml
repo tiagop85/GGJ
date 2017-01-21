@@ -70,7 +70,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>416</x>
-                        <y>416</y>
+                        <y>384</y>
                         <z>0</z>
                         <width>160</width>
                         <height>96</height>

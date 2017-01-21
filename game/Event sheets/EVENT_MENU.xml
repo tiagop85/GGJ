@@ -8,8 +8,8 @@
                 <condition behavior="Fade" id="0" name="On fade-out finished" sid="491309853775135" type="sfSplash" />
             </conditions>
             <actions>
-                <action id="-25" name="Go to layout (by name)" sid="851834901561181" type="System">
-                    <param id="0" name="Layout">&quot;MAIN&quot;</param>
+                <action id="-2" name="Go to layout" sid="851834901561181" type="System">
+                    <param id="0" name="Layout">MENU</param>
                 </action>
             </actions>
         </event-block>
@@ -55,6 +55,9 @@
                                 <action id="4" name="Set animation" sid="353030187012986" type="allButtons">
                                     <param id="0" name="Animation">&quot;default&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="417154303316276" type="System">
+                                    <param id="0" name="Layout">MAIN</param>
                                 </action>
                             </actions>
                         </event-block>

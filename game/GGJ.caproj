@@ -233,8 +233,8 @@
                 </animation-folder>
             </object-type>
             <object-type name="Audio" sid="365270198541095">
-            <plugin id="Audio" />
-        </object-type>
+                <plugin id="Audio" />
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -261,7 +261,7 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="10" />
-        <global-instance type="Audio" uid="11">
+        <global-instance type="Audio" uid="23">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
