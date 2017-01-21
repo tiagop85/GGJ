@@ -23,6 +23,8 @@
         <variable constant="0" name="WAY" sid="665770137775048" static="0" type="number">0</variable>
         <variable constant="0" name="WAVE_STATUS_TIMER" sid="691847155443226" static="0" type="number">0</variable>
         <variable constant="0" name="IS_PLAYER_MOVING" sid="295094730813555" static="0" type="number">0</variable>
+        <variable constant="0" name="VOLUME_WAVE" sid="526927586557686" static="0" type="number">-20</variable>
+        <variable constant="0" name="IS_WAVE_COMING" sid="325409095304308" static="0" type="number">0</variable>
         <variable constant="0" name="IS_PADDLE_PLAYING" sid="902972200941605" static="0" type="number">0</variable>
         <variable constant="1" name="CT_WAVE_STATUS_SPAWNED" sid="683055582700341" static="0" type="number">2</variable>
         <variable constant="0" name="GAME_SCORE" sid="792835554555321" static="0" type="number">0</variable>
@@ -262,8 +264,12 @@
                         <action id="0" name="Play" sid="522494399193658" type="Audio">
                             <param id="0" name="Audio file">Tidal Wave</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-20</param>
+                            <param id="3" name="Volume">VOLUME_WAVE</param>
                             <param id="1" name="Tag (optional)">&quot;WAVE&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="800795065082194" type="System">
+                            <param id="0" name="Variable">IS_WAVE_COMING</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-3" name="Create object" sid="378597660502461" type="System">
                             <param id="0" name="Object to create">spWave</param>
@@ -706,6 +712,10 @@
                         <condition id="-3" inverted="1" name="Is on-screen" sid="537382208004821" type="spWave" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="589387597955388" type="System">
+                            <param id="0" name="Variable">IS_WAVE_COMING</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-16" name="Wait" sid="579728610775229" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
@@ -714,49 +724,134 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="584532201023693">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="346149783533925" type="System">
-                    <param id="0" name="First value">IS_PADDLE_PLAYING</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">0</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block any="1" sid="667419380079599">
+                <event-block sid="584532201023693">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="792727439820526" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
+                        <condition id="-8" name="Compare two values" sid="346149783533925" type="System">
+                            <param id="0" name="First value">IS_PADDLE_PLAYING</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
-                        <condition id="2" name="Key is down" sid="602037978007964" type="Keyboard">
-                            <param id="0" name="Key">40 (Down arrow)</param>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="667419380079599">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="792727439820526" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="602037978007964" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                                <condition id="2" name="Is in touch" sid="278608225064693" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="475339952601658" type="Audio">
+                                    <param id="0" name="Audio file">paddle</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;paddle&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="405154621197134" type="System">
+                                    <param id="0" name="Variable">IS_PADDLE_PLAYING</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="462842073812368" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="730974703185464" type="System">
+                                    <param id="0" name="Variable">IS_PADDLE_PLAYING</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="326778321652193">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="580111914907006" type="System">
+                            <param id="0" name="First value">IS_WAVE_COMING</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
                         </condition>
-                        <condition id="2" name="Is in touch" sid="278608225064693" type="Touch" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="475339952601658" type="Audio">
-                            <param id="0" name="Audio file">paddle</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;paddle&quot;</param>
+                        <action id="-10" name="Add to" sid="703853372310566" type="System">
+                            <param id="0" name="Variable">VOLUME_WAVE</param>
+                            <param id="1" name="Value">0.1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="405154621197134" type="System">
-                            <param id="0" name="Variable">IS_PADDLE_PLAYING</param>
+                        <action id="3" name="Set volume" sid="160835126267139" type="Audio">
+                            <param id="0" name="Tag">&quot;wave&quot;</param>
+                            <param id="1" name="dB">VOLUME_WAVE</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="350575437838398">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="915139053421671" type="System">
+                            <param id="0" name="First value">VOLUME_WAVE</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">-15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="756261457790547" type="System">
+                            <param id="0" name="Variable">IS_WAVE_COMING</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="706428777402911" type="System">
+                            <param id="0" name="Variable">VOLUME_WAVE</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="462842073812368" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="730974703185464" type="System">
-                            <param id="0" name="Variable">IS_PADDLE_PLAYING</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="3" name="Set volume" sid="867777621628218" type="Audio">
+                            <param id="0" name="Tag">&quot;wave&quot;</param>
+                            <param id="1" name="dB">VOLUME_WAVE</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-group>
+        <event-block sid="944779841697604">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="892515849358142" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="334302557041915" type="spPlayer">
+                    <param id="0" name="Object">spr_rastro</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">&quot;origin&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="325512741629335">
+            <conditions>
+                <condition id="-18" name="On created" sid="814917446750142" type="spr_rastro" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="677466435343631" type="spr_rastro">
+                    <param id="0" name="Opacity">Self.Opacity-20</param>
+                </action>
+                <action id="-16" name="Wait" sid="457752282266134" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="588580507373092" type="spr_rastro">
+                    <param id="0" name="Opacity">Self.Opacity-30</param>
+                </action>
+                <action id="-16" name="Wait" sid="328278780029007" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="240670147528744" type="spr_rastro">
+                    <param id="0" name="Opacity">Self.Opacity-40</param>
+                </action>
+                <action id="-16" name="Wait" sid="310807835344241" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="350065599839770" type="spr_rastro">
+                    <param id="0" name="Opacity">Self.Opacity-50</param>
+                </action>
+                <action id="-9" name="Destroy" sid="575372642504158" type="spr_rastro" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

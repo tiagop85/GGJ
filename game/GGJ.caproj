@@ -365,6 +365,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="spr_rastro" sid="529374546485604">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="447588206154433">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238684437622862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
@@ -383,14 +396,14 @@
         <event-sheet>EVENT_MENU.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="24" />
-        <global-instance type="Touch" uid="25">
+        <global-instance type="Mouse" uid="25" />
+        <global-instance type="Touch" uid="26">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="26" />
-        <global-instance type="Audio" uid="27">
+        <global-instance type="Keyboard" uid="27" />
+        <global-instance type="Audio" uid="29">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
