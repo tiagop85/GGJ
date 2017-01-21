@@ -23,6 +23,8 @@
         <variable constant="1" name="CT_GAME_STATUS_GAMEOVER" sid="418438145189092" static="0" type="number">5</variable>
         <variable constant="0" name="WAY" sid="665770137775048" static="0" type="number">0</variable>
         <variable constant="0" name="WAVE_STATUS_TIMER" sid="691847155443226" static="0" type="number">0</variable>
+        <variable constant="0" name="IS_PLAYER_MOVING" sid="295094730813555" static="0" type="number">0</variable>
+        <variable constant="0" name="IS_PADDLE_PLAYING" sid="902972200941605" static="0" type="number">0</variable>
         <variable constant="1" name="CT_WAVE_STATUS_SPAWNED" sid="683055582700341" static="0" type="number">2</variable>
         <variable constant="0" name="GAME_SCORE" sid="792835554555321" static="0" type="number">0</variable>
         <event-block sid="419656281825390">
@@ -150,42 +152,6 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="998259476821490">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="456014674804899" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="678531267662778" type="System">
-                                    <param id="0" name="First value">mouse.Y</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">LayoutHeight/2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="251920158409771" type="spPlayer">
-                                    <param id="0" name="X">Self.X</param>
-                                    <param id="1" name="Y">Self.Y-SPEED_PLAYER</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="745089449567252">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="461091555603501" type="System">
-                                    <param id="0" name="First value">mouse.Y</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">LayoutHeight/2</param>
-                                </condition>
-                                <condition id="2" name="Mouse button is down" sid="365562490776055" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="528900258158523" type="spPlayer">
-                                    <param id="0" name="X">Self.X</param>
-                                    <param id="1" name="Y">Self.Y+SPEED_PLAYER</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="879224483542756">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="907506428766922" type="Keyboard">
@@ -399,6 +365,15 @@
                         <action id="-9" name="Set value" sid="967764528325398" type="System">
                             <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
                             <param id="1" name="Value">CT_WAVE_STATUS_SPAWNED</param>
+                        </action>
+                        <action id="0" name="Play" sid="522494399193658" type="Audio">
+                            <param id="0" name="Audio file">Tidal Wave</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;WAVE&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="422077662225955" type="System">
+                            <param id="0" name="Seconds">2</param>
                         </action>
                         <action id="-3" name="Create object" sid="378597660502461" type="System">
                             <param id="0" name="Object to create">spWave</param>
@@ -748,6 +723,81 @@
                     <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-group description="" sid="159158950411524" title="Sound">
+            <sub-events>
+                <event-block sid="771614921326038">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="280466895762060" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="756278633812910" type="Audio">
+                            <param id="0" name="Audio file">stream</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;SOUND_STREAM&quot;</param>
+                        </action>
+                        <action id="4" name="Preload" sid="118648829800682" type="Audio">
+                            <param id="0" name="Audio file">paddle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="222758723580750">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="537382208004821" type="spWave" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="579728610775229" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="277916757644371" type="Audio">
+                            <param id="0" name="Tag">&quot;WAVE&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="584532201023693">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="346149783533925" type="System">
+                    <param id="0" name="First value">IS_PADDLE_PLAYING</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="667419380079599">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="792727439820526" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="602037978007964" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                        <condition id="2" name="Is in touch" sid="278608225064693" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="475339952601658" type="Audio">
+                            <param id="0" name="Audio file">paddle</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;paddle&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="405154621197134" type="System">
+                            <param id="0" name="Variable">IS_PADDLE_PLAYING</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="462842073812368" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="730974703185464" type="System">
+                            <param id="0" name="Variable">IS_PADDLE_PLAYING</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

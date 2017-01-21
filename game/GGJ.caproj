@@ -11,14 +11,17 @@
     <saved-with-version>24100</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
     </used-behaviors>
@@ -32,6 +35,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>SPLASH</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -213,10 +217,69 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-folder name="Menu">
+            <object-type name="sfSplash" sid="593369521608696">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="646717404539601">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="spTitle" sid="987699773814022">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="spStart" sid="146151246500926">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="default" pingpong="0" repeatcount="1" repeatto="0" sid="986768916325329" speed="5">
+                        <frame duration="1" hotspotX="0.500795" hotspotY="0.462428" original-source="C:\Repositorio\GGJ\assets\BOTAO_PLAY.png">
+                            <collision-poly>
+                                <point x="0.128776" y="0.156069" />
+                                <point x="0.500795" y="0.127168" />
+                                <point x="0.872814" y="0.156069" />
+                                <point x="0.888712" y="0.462428" />
+                                <point x="0.872814" y="0.768786" />
+                                <point x="0.500795" y="0.797688" />
+                                <point x="0.128776" y="0.768786" />
+                                <point x="0.112878" y="0.462428" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="clicked" pingpong="0" repeatcount="1" repeatto="0" sid="648129744202122" speed="5">
+                        <frame duration="1" hotspotX="0.49142" hotspotY="0.470588">
+                            <collision-poly>
+                                <point x="0.126365" y="0.158824" />
+                                <point x="0.49142" y="0.129412" />
+                                <point x="0.856474" y="0.158824" />
+                                <point x="0.872075" y="0.470588" />
+                                <point x="0.856474" y="0.782353" />
+                                <point x="0.49142" y="0.808824" />
+                                <point x="0.126365" y="0.782353" />
+                                <point x="0.110764" y="0.470588" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Audio" sid="365270198541095">
+                <plugin id="Audio" />
+            </object-type>
     </object-folder>
-    <families />
+    </object-folder>
+    <families>
+        <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
+            <members>
+                <member>spStart</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>MAIN.xml</layout>
+        <layout>SPLASH.xml</layout>
+        <layout>MENU.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EVENT_GAME.xml</event-sheet>
@@ -230,8 +293,28 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="10" />
+        <global-instance type="Audio" uid="23">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="paddle.ogg" />
+        <file name="stream.m4a" />
+        <file name="stream.ogg" />
+        <file name="Tidal Wave.m4a" />
+        <file name="Tidal Wave.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
