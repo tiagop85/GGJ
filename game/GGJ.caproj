@@ -10,6 +10,7 @@
     <unique-id>1bsnbr6s1m559</unique-id>
     <saved-with-version>24100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -181,6 +182,9 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="Audio" sid="365270198541095">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -198,8 +202,28 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="10" />
+        <global-instance type="Audio" uid="11">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="sinkWater3.ogg" />
+        <file name="stream.m4a" />
+        <file name="stream.ogg" />
+        <file name="Tidal Wave.m4a" />
+        <file name="Tidal Wave.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

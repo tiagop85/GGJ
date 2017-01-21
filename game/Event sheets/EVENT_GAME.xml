@@ -251,6 +251,15 @@
                             <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
                             <param id="1" name="Value">CT_WAVE_STATUS_SPAWNED</param>
                         </action>
+                        <action id="0" name="Play" sid="522494399193658" type="Audio">
+                            <param id="0" name="Audio file">Tidal Wave</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;WAVE&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="422077662225955" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
                         <action id="-3" name="Create object" sid="378597660502461" type="System">
                             <param id="0" name="Object to create">spWave</param>
                             <param id="1" name="Layer">0</param>
@@ -531,5 +540,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="771614921326038">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="280466895762060" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="756278633812910" type="Audio">
+                    <param id="0" name="Audio file">stream</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;SOUND_STREAM&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
