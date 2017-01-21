@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="spTitle" uid="16">
+                <instance type="spTitle" uid="20">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -59,7 +59,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spStart" uid="22">
+                <instance type="spStart" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>click</initial-animation>

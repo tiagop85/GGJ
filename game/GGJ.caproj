@@ -164,10 +164,79 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852928694782415" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="TRASH01" pingpong="0" repeatcount="1" repeatto="0" sid="793904757736238" speed="5">
+                        <frame duration="1" hotspotX="0.501901" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-15.png">
+                            <collision-poly>
+                                <point x="0.163498" y="0.188596" />
+                                <point x="0.498099" y="0.0219298" />
+                                <point x="0.73384" y="0.307018" />
+                                <point x="0.977186" y="0.973684" />
+                                <point x="0.0570342" y="0.934211" />
+                                <point x="0.13308" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TRASH02" pingpong="0" repeatcount="1" repeatto="0" sid="714708920205612" speed="5">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.502203" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-16.png">
+                            <collision-poly>
+                                <point x="0.498113" y="0.0396476" />
+                                <point x="0.766038" y="0.273128" />
+                                <point x="0.924528" y="0.497797" />
+                                <point x="0.984906" y="0.982379" />
+                                <point x="0.0415094" y="0.951542" />
+                                <point x="0.0943396" y="0.497797" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TRASH03" pingpong="0" repeatcount="1" repeatto="0" sid="975564693350384" speed="5">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-17.png">
+                            <collision-poly>
+                                <point x="0.132075" y="0.152174" />
+                                <point x="0.498113" y="0.0304348" />
+                                <point x="0.671698" y="0.378261" />
+                                <point x="0.713208" y="0.5" />
+                                <point x="0.988679" y="0.986957" />
+                                <point x="0.045283" y="0.947826" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TRASH04" pingpong="0" repeatcount="1" repeatto="0" sid="981552694868117" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-18.png">
+                            <collision-poly>
+                                <point x="0.166667" y="0.192982" />
+                                <point x="0.5" y="0.0833333" />
+                                <point x="0.753788" y="0.285088" />
+                                <point x="0.791667" y="0.5" />
+                                <point x="0.992424" y="0.991228" />
+                                <point x="0.0454545" y="0.947368" />
+                                <point x="0.166667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TRASH05" pingpong="0" repeatcount="1" repeatto="0" sid="685238635524847" speed="5">
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-19.png">
+                            <collision-poly>
+                                <point x="0.498113" y="0.10177" />
+                                <point x="0.74717" y="0.29646" />
+                                <point x="0.883019" y="0.5" />
+                                <point x="0.988679" y="0.986726" />
+                                <point x="0.045283" y="0.946903" />
+                                <point x="0.0490566" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="TRASH06" pingpong="0" repeatcount="1" repeatto="0" sid="619913167377021" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502203" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-20.png">
+                            <collision-poly>
+                                <point x="0.219697" y="0.255507" />
+                                <point x="0.5" y="0.127753" />
+                                <point x="0.833333" y="0.193833" />
+                                <point x="0.943182" y="0.497797" />
+                                <point x="0.992424" y="0.991189" />
+                                <point x="0.0454545" y="0.947137" />
+                                <point x="0.0454545" y="0.497797" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -192,8 +261,23 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131713884000794" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131713884000794" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0273866" y="0.0175439" />
+                                <point x="0.304878" y="0.0241228" />
+                                <point x="0.304878" y="0.97807" />
+                                <point x="0.0243453" y="0.984649" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0273866" y="0.0175439" />
+                                <point x="0.304878" y="0.0241228" />
+                                <point x="0.304878" y="0.97807" />
+                                <point x="0.0243453" y="0.984649" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -202,6 +286,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591043279104737" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spBackground" sid="521092021907881">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756463247290399" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\river_bg.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -259,14 +351,6 @@
         </object-folder>
         <object-type name="txPaused" sid="821439722708067">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="Sprite" sid="521092021907881">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756463247290399" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\river_bg.png" />
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>

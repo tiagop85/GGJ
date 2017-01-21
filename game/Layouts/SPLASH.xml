@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="sfSplash" uid="11">
+                <instance type="sfSplash" uid="10">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>

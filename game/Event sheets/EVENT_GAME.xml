@@ -5,11 +5,11 @@
     <events>
         <include>EVENT_MENU</include>
         <variable constant="0" name="SPEED_PLAYER" sid="460587208817183" static="0" type="number">6</variable>
-        <variable constant="0" name="SPEED_WAVE1" sid="328454233105574" static="0" type="number">100</variable>
+        <variable constant="0" name="SPEED_WAVE1" sid="328454233105574" static="0" type="number">25</variable>
         <variable constant="0" name="SPEED_WAVE_2" sid="495390608239009" static="0" type="number">600</variable>
         <variable constant="0" name="ACCEL_WAVE" sid="999022812363222" static="0" type="number">200</variable>
         <variable constant="0" name="WAVE_INI_X" sid="265240918103755" static="0" type="number">0</variable>
-        <variable constant="0" name="WAVE_INI_Y" sid="508587774252765" static="0" type="number">357</variable>
+        <variable constant="0" name="WAVE_INI_Y" sid="508587774252765" static="0" type="number">360</variable>
         <variable constant="0" name="TRASH_INI_X" sid="626603605365530" static="0" type="number">1157</variable>
         <variable constant="0" name="TRASH_INI_Y1" sid="104897738670933" static="0" type="number">230</variable>
         <variable constant="0" name="TRASH_INI_Y2" sid="169803074794478" static="0" type="number">358</variable>
