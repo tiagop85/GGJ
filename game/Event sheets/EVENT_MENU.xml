@@ -42,6 +42,7 @@
                                 <condition id="4" name="Is touching object" sid="709696320586986" type="Touch">
                                     <param id="0" name="Object">spStart</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="419034386177783" type="spStart" />
                             </conditions>
                             <actions>
                                 <action id="-16" name="Wait" sid="848135977943365" type="System">
@@ -58,8 +59,9 @@
                         <event-block sid="219058583131562">
                             <conditions>
                                 <condition id="4" name="Is touching object" sid="238788025779608" type="Touch">
-                                    <param id="0" name="Object">spExit</param>
+                                    <param id="0" name="Object">spClose</param>
                                 </condition>
+                                <condition id="-9" name="Is visible" sid="524541692923983" type="spClose" />
                             </conditions>
                             <actions>
                                 <action id="-2" name="Go to layout" sid="298238234163922" type="System">
@@ -79,6 +81,18 @@
                                 <action id="33" name="Stop all" sid="767193569312406" type="Audio" />
                                 <action id="-26" name="Restart layout" sid="914798325623089" type="System" />
                                 <action id="-21" name="Reset global variables" sid="665876184693905" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="740087040022467">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="656836506723407" type="Touch">
+                                    <param id="0" name="Object">spRestart</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="669094709651038" type="spRestart" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="897640925230882" type="System" />
+                                <action id="-21" name="Reset global variables" sid="201079356409181" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>

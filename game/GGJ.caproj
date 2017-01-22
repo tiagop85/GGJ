@@ -198,7 +198,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128302411384434" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\GAME_OVER-41.png">
+                        <frame duration="1" hotspotX="0.500956" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\Tela Game Over\GameOver-48.png">
                             <collision-poly>
                                 <point x="0.152174" y="0.152727" />
                                 <point x="0.5" y="0.00181818" />
@@ -210,6 +210,50 @@
                                 <point x="0.00181159" y="0.5" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spClose" sid="230831120678234">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="259976911371918" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" original-source="C:\Users\duuh\Desktop\GGJ\assets\Tela Game Over\GameOver-44.png">
+                            <collision-poly>
+                                <point x="0.142857" y="0.150943" />
+                                <point x="0.5" y="0" />
+                                <point x="0.880952" y="0.125786" />
+                                <point x="0.988095" y="0.496855" />
+                                <point x="0.89881" y="0.893082" />
+                                <point x="0.5" y="1" />
+                                <point x="0.119048" y="0.874214" />
+                                <point x="0.00595238" y="0.496855" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="715324882998000" speed="5">
+                        <frame duration="1" hotspotX="0.502959" hotspotY="0.50303" original-source="C:\Users\duuh\Desktop\GGJ\assets\Tela Game Over\GameOver-46.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spRestart" sid="279440787149576">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="347539892855783" speed="5">
+                        <frame duration="1" hotspotX="0.502959" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\Tela Game Over\GameOver-43.png">
+                            <collision-poly>
+                                <point x="0.142012" y="0.146341" />
+                                <point x="0.497041" y="0" />
+                                <point x="0.87574" y="0.128049" />
+                                <point x="0.976331" y="0.5" />
+                                <point x="0.881657" y="0.878049" />
+                                <point x="0.497041" y="0.987805" />
+                                <point x="0.136095" y="0.859756" />
+                                <point x="0.0177515" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="862495749546298" speed="5">
+                        <frame duration="1" hotspotX="0.502959" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\Tela Game Over\GameOver-45.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -693,13 +737,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="673887631093675">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528251020616564" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
             <members>
+                <member>spClose</member>
                 <member>spExit</member>
                 <member>spPause</member>
                 <member>spPlayMenu</member>
+                <member>spRestart</member>
                 <member>spStart</member>
             </members>
         </family>
