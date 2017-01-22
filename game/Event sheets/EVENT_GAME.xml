@@ -680,6 +680,12 @@
                                         <action id="0" name="Set text" sid="221186243089109" type="txScore">
                                             <param id="0" name="Text">GAME_SCORE</param>
                                         </action>
+                                        <action id="0" name="Play" sid="190546705756850" type="Audio">
+                                            <param id="0" name="Audio file">Monkey Chimpanzee Sound effect</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SCORE_SOUND&quot;</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="954829872736737">
