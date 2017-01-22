@@ -3,16 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EVENT_MENU</name>
     <events>
-        <event-block sid="447599087558200">
-            <conditions>
-                <condition behavior="Fade" id="0" name="On fade-out finished" sid="491309853775135" type="sfSplash" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="851834901561181" type="System">
-                    <param id="0" name="Layout">MENU</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="521191151750074" title="Button Manager">
             <sub-events>
                 <event-block sid="614110545978925">
@@ -23,14 +13,6 @@
                         <action id="2" name="Stop" sid="684219105695750" type="allButtons" />
                     </actions>
                 </event-block>
-                <event-block any="1" disabled="1" sid="506539070278789">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="708746188960542" type="Touch">
-                            <param id="0" name="Object">allButtons</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
                 <event-block sid="615072466450698">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="355111372572486" type="Touch">
@@ -39,7 +21,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="218159322200831" type="allButtons">
-                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="0" name="Animation">&quot;pressed&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -53,17 +35,51 @@
                                     <param id="0" name="Seconds">0.2</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="353030187012986" type="allButtons">
-                                    <param id="0" name="Animation">&quot;default&quot;</param>
+                                    <param id="0" name="Animation">&quot;unpressed&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-21" name="Reset global variables" sid="161044599405566" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="612382213482327">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="709696320586986" type="Touch">
+                                    <param id="0" name="Object">spStart</param>
+                                </condition>
+                            </conditions>
+                            <actions>
                                 <action id="-2" name="Go to layout" sid="417154303316276" type="System">
                                     <param id="0" name="Layout">MAIN</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="289708662393621" type="System" />
+                                <action id="-21" name="Reset global variables" sid="161044599405566" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="240400750754608" title="Splash Manager">
+            <sub-events>
+                <event-block sid="447599087558200">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="491309853775135" type="tbSplashSponsor" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="951620908992030" type="tbSplashTeam">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="571923130795466" type="tbSplashTeam" />
+                    </actions>
+                </event-block>
+                <event-block sid="552770275654267">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="358424645627698" type="tbSplashTeam" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="851834901561181" type="System">
+                            <param id="0" name="Layout">MENU</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

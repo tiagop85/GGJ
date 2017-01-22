@@ -15,8 +15,8 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -69,6 +69,9 @@
                     <instance-variable name="MAX_SCORE" sid="512259079582360" type="number" />
                 </instance-variables>
             </object-type>
+            <object-type name="Audio" sid="365270198541095">
+                <plugin id="Audio" />
+            </object-type>
         </object-folder>
         <object-folder name="Player">
             <object-type name="spPlayer" sid="101086059513427">
@@ -100,6 +103,19 @@
                         <frame duration="1" hotspotX="0" hotspotY="0.61194" />
                         <frame duration="1" hotspotX="0" hotspotY="0.564516" />
                         <frame duration="1" hotspotX="0" hotspotY="0.59322" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spr_rastro" sid="529374546485604">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="447588206154433">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238684437622862" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -141,6 +157,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="txScoreMAX" sid="577678171209649">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="txPaused" sid="821439722708067">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -281,14 +300,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="spPause" sid="680004046247218">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591043279104737" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="spBackground" sid="521092021907881">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -297,87 +308,93 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spTimer" sid="296656925762595">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="778548899297063">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510264481355528" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
-            <object-type name="sfSplash" sid="593369521608696">
-                <plugin id="Spritefont2" />
+            <object-type name="tbMenu" sid="279473669799146">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-30.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Splash">
+            <object-type name="tbSplashBg" sid="487414668866880">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="tbSplashSponsor" sid="301519876263188">
+                <plugin id="TiledBg" />
                 <behaviors>
-                    <behavior-type name="Fade" sid="646717404539601">
+                    <behavior-type name="Fade" sid="339834642294627">
                         <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
-                <texture />
+                <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_splash1_2-37.png" />
             </object-type>
-            <object-type name="spTitle" sid="987699773814022">
-                <plugin id="Spritefont2" />
-                <texture />
+            <object-type name="tbSplashTeam" sid="313030613254009">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="754089052732864">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_splash1_2-36.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Buttons">
+            <object-type name="spPause" sid="680004046247218">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591043279104737" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
             <object-type name="spStart" sid="146151246500926">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="default" pingpong="0" repeatcount="1" repeatto="0" sid="986768916325329" speed="5">
-                        <frame duration="1" hotspotX="0.500795" hotspotY="0.462428" original-source="C:\Repositorio\GGJ\assets\BOTAO_PLAY.png">
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="986768916325329" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.460938" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_principal_export-38.png">
                             <collision-poly>
-                                <point x="0.128776" y="0.156069" />
-                                <point x="0.500795" y="0.127168" />
-                                <point x="0.872814" y="0.156069" />
-                                <point x="0.888712" y="0.462428" />
-                                <point x="0.872814" y="0.768786" />
-                                <point x="0.500795" y="0.797688" />
-                                <point x="0.128776" y="0.768786" />
-                                <point x="0.112878" y="0.462428" />
+                                <point x="0.131409" y="0.161443" />
+                                <point x="0.500789" y="0.132994" />
+                                <point x="0.87017" y="0.161443" />
+                                <point x="0.885955" y="0.463015" />
+                                <point x="0.87017" y="0.764586" />
+                                <point x="0.500789" y="0.793037" />
+                                <point x="0.131409" y="0.764586" />
+                                <point x="0.115624" y="0.463015" />
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="clicked" pingpong="0" repeatcount="1" repeatto="0" sid="648129744202122" speed="5">
-                        <frame duration="1" hotspotX="0.49142" hotspotY="0.470588">
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="648129744202122" speed="5">
+                        <frame duration="1" hotspotX="0.491166" hotspotY="0.469231" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_principal_export-39.png">
                             <collision-poly>
-                                <point x="0.126365" y="0.158824" />
-                                <point x="0.49142" y="0.129412" />
-                                <point x="0.856474" y="0.158824" />
-                                <point x="0.872075" y="0.470588" />
-                                <point x="0.856474" y="0.782353" />
-                                <point x="0.49142" y="0.808824" />
-                                <point x="0.126365" y="0.782353" />
-                                <point x="0.110764" y="0.470588" />
+                                <point x="0.129006" y="0.164073" />
+                                <point x="0.491481" y="0.135113" />
+                                <point x="0.853955" y="0.164073" />
+                                <point x="0.869446" y="0.47104" />
+                                <point x="0.853955" y="0.778009" />
+                                <point x="0.491481" y="0.804073" />
+                                <point x="0.129006" y="0.778009" />
+                                <point x="0.113515" y="0.47104" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Audio" sid="365270198541095">
-                <plugin id="Audio" />
-            </object-type>
         </object-folder>
-        <object-type name="txPaused" sid="821439722708067">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="spTimer" sid="296656925762595">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Timer" sid="778548899297063">
-                    <behavior id="Timer" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510264481355528" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="spr_rastro" sid="529374546485604">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="447588206154433">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238684437622862" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">

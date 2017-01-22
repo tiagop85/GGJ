@@ -29,58 +29,6 @@
         <variable constant="1" name="CT_WAVE_STATUS_SPAWNED" sid="683055582700341" static="0" type="number">2</variable>
         <variable constant="0" name="GAME_SCORE" sid="792835554555321" static="0" type="number">0</variable>
         <variable constant="0" name="TIME_SCALE_NORMAL" sid="982606028970652" static="0" type="number">1</variable>
-        <event-block sid="419656281825390">
-            <conditions>
-                <condition id="3" name="On touched object" sid="687126697262572" type="Touch">
-                    <param id="0" name="Object">spPause</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="119704563744042">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="341516886036938" type="System">
-                            <param id="0" name="First value">timescale</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">TIME_SCALE_NORMAL</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="561636742725193" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_PAUSE_ON</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="709139185074379" type="txPaused">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="428241509248199" type="System">
-                            <param id="0" name="Time scale">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="167556775493016">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="420246819691570" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="922276274709237" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="886441877543565" type="txPaused">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="522680909867196" type="System">
-                            <param id="0" name="Time scale">TIME_SCALE_NORMAL</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="320264047749877" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-group description="" sid="137128985782842" title="Player Manager">
             <sub-events>
                 <event-block sid="376043819827822">
@@ -231,6 +179,49 @@
                         </action>
                         <action id="-21" name="Reset global variables" sid="623257226202677" type="System" />
                         <action id="-26" name="Restart layout" sid="383435278268198" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="944779841697604">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="892515849358142" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="334302557041915" type="spPlayer">
+                            <param id="0" name="Object">spr_rastro</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;origin&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="325512741629335">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="814917446750142" type="spr_rastro" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="677466435343631" type="spr_rastro">
+                            <param id="0" name="Opacity">Self.Opacity-20</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="457752282266134" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="588580507373092" type="spr_rastro">
+                            <param id="0" name="Opacity">Self.Opacity-30</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="328278780029007" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="240670147528744" type="spr_rastro">
+                            <param id="0" name="Opacity">Self.Opacity-40</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="310807835344241" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="350065599839770" type="spr_rastro">
+                            <param id="0" name="Opacity">Self.Opacity-50</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="575372642504158" type="spr_rastro" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -605,91 +596,49 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="583285361379247">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="812900581456495" type="System" />
-            </conditions>
-            <actions>
-                <action id="-21" name="Reset global variables" sid="343552588766687" type="System" />
-                <action id="0" name="Set text" sid="954630917841104" type="txScore">
-                    <param id="0" name="Text">GAME_SCORE</param>
-                </action>
-                <action id="0" name="Set text" sid="347596281430148" type="txScoreMAX">
-                    <param id="0" name="Text">arControl.MAX_SCORE</param>
-                </action>
-                <action id="5" name="Set web font" sid="652054935100252" type="txScore">
-                    <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
-                    <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
-                </action>
-                <action id="5" name="Set web font" sid="362684729767745" type="txScoreMAX">
-                    <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
-                    <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
-                </action>
-                <action id="5" name="Set web font" sid="402025850274912" type="txScoreLabel">
-                    <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
-                    <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="177485456624378" type="spTimer">
-                    <param id="0" name="Duration">1.0</param>
-                    <param id="1" name="Type">1</param>
-                    <param id="2" name="Tag">&quot;GameStarted&quot;</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="169345074389759">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="364796060818553" type="System">
-                            <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
-                            <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="586154680784910">
-            <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="845605975286608" type="spTimer">
-                    <param id="0" name="Tag">&quot;GameStarted&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="582929378928205">
+                <event-block sid="586154680784910">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="383298740358123" type="System">
-                            <param id="0" name="Variable">GAME_STATUS</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
+                        <condition behavior="Timer" id="0" name="On timer" sid="845605975286608" type="spTimer">
+                            <param id="0" name="Tag">&quot;GameStarted&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="522083148036485">
+                        <event-block sid="582929378928205">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="769715198076568" type="spWave">
-                                    <param id="0" name="Instance variable">TIMER_ON</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="376400242354547" type="System">
-                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-14" name="Compare variable" sid="383298740358123" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CT_GAME_STATUS_PLAY</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="207210375768325" type="System">
-                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="522083148036485">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="769715198076568" type="spWave">
+                                            <param id="0" name="Instance variable">TIMER_ON</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="376400242354547" type="System">
+                                            <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="207210375768325" type="System">
+                                            <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-group description="" sid="159158950411524" title="Sound">
+        </event-group>
+        <event-group description="" sid="159158950411524" title="Sound Manager">
             <sub-events>
                 <event-block sid="771614921326038">
                     <conditions>
@@ -810,48 +759,103 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="944779841697604">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="892515849358142" type="System">
-                    <param id="0" name="Interval (seconds)">0.2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="334302557041915" type="spPlayer">
-                    <param id="0" name="Object">spr_rastro</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">&quot;origin&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="325512741629335">
-            <conditions>
-                <condition id="-18" name="On created" sid="814917446750142" type="spr_rastro" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="677466435343631" type="spr_rastro">
-                    <param id="0" name="Opacity">Self.Opacity-20</param>
-                </action>
-                <action id="-16" name="Wait" sid="457752282266134" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="588580507373092" type="spr_rastro">
-                    <param id="0" name="Opacity">Self.Opacity-30</param>
-                </action>
-                <action id="-16" name="Wait" sid="328278780029007" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="240670147528744" type="spr_rastro">
-                    <param id="0" name="Opacity">Self.Opacity-40</param>
-                </action>
-                <action id="-16" name="Wait" sid="310807835344241" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="350065599839770" type="spr_rastro">
-                    <param id="0" name="Opacity">Self.Opacity-50</param>
-                </action>
-                <action id="-9" name="Destroy" sid="575372642504158" type="spr_rastro" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="645971300163824" title="Game Manager">
+            <sub-events>
+                <event-block sid="583285361379247">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="812900581456495" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="343552588766687" type="System" />
+                        <action id="0" name="Set text" sid="954630917841104" type="txScore">
+                            <param id="0" name="Text">GAME_SCORE</param>
+                        </action>
+                        <action id="0" name="Set text" sid="347596281430148" type="txScoreMAX">
+                            <param id="0" name="Text">arControl.MAX_SCORE</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="652054935100252" type="txScore">
+                            <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="362684729767745" type="txScoreMAX">
+                            <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="402025850274912" type="txScoreLabel">
+                            <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
+                            <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="177485456624378" type="spTimer">
+                            <param id="0" name="Duration">1.0</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;GameStarted&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="169345074389759">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="364796060818553" type="System">
+                                    <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
+                                    <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="419656281825390">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="687126697262572" type="Touch">
+                            <param id="0" name="Object">spPause</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="119704563744042">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="341516886036938" type="System">
+                                    <param id="0" name="First value">timescale</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">TIME_SCALE_NORMAL</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="561636742725193" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Value">CT_GAME_STATUS_PAUSE_ON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="709139185074379" type="txPaused">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="428241509248199" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="167556775493016">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="420246819691570" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="922276274709237" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="886441877543565" type="txPaused">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="522680909867196" type="System">
+                                    <param id="0" name="Time scale">TIME_SCALE_NORMAL</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="320264047749877" type="System">
+                                    <param id="0" name="Variable">GAME_STATUS</param>
+                                    <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
