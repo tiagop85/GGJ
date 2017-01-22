@@ -31,9 +31,6 @@
                                 <condition id="1" name="On any touch end" sid="982628920148106" type="Touch" />
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="938190193447058" type="System">
-                                    <param id="0" name="Seconds">0.2</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="353030187012986" type="allButtons">
                                     <param id="0" name="Animation">&quot;unpressed&quot;</param>
                                     <param id="1" name="From">1</param>

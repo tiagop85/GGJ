@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EVENT_GAME</name>
     <events>
+        <include>EVENT_MENU</include>
+        <variable constant="0" name="PLAY_AUDIO" sid="827403614259790" static="0" type="number">1</variable>
         <variable constant="0" name="SPEED_PLAYER" sid="460587208817183" static="0" type="number">6</variable>
         <variable constant="0" name="SPEED_WAVE1" sid="328454233105574" static="0" type="number">25</variable>
         <variable constant="0" name="SPEED_WAVE_2" sid="495390608239009" static="0" type="number">600</variable>
@@ -141,7 +143,7 @@
                                     <param id="0" name="Variable">GAME_STATUS</param>
                                     <param id="1" name="Value">CT_GAME_STATUS_STUCK_SAND</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="390706319563158" type="txGameOver">
+                                <action id="-15" name="Set visible" sid="390706319563158" type="spGameOver">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="349889454412253" type="spRightWay">
@@ -171,7 +173,7 @@
                             <param id="0" name="Variable">GAME_STATUS</param>
                             <param id="1" name="Value">CT_GAME_STATUS_GAMEOVER</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="825015818941904" type="txGameOver">
+                        <action id="-15" name="Set visible" sid="825015818941904" type="spGameOver">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="633971926639242" type="System">
@@ -251,12 +253,6 @@
                         <action id="-9" name="Set value" sid="967764528325398" type="System">
                             <param id="0" name="Variable">WAVE_STATUS_TIMER</param>
                             <param id="1" name="Value">CT_WAVE_STATUS_SPAWNED</param>
-                        </action>
-                        <action id="0" name="Play" sid="522494399193658" type="Audio">
-                            <param id="0" name="Audio file">Tidal Wave</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">VOLUME_WAVE</param>
-                            <param id="1" name="Tag (optional)">&quot;WAVE&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="800795065082194" type="System">
                             <param id="0" name="Variable">IS_WAVE_COMING</param>
@@ -389,6 +385,23 @@
                                 <action id="4" name="Set animation" sid="481220380502797" type="spTrash">
                                     <param id="0" name="Animation">choose(&quot;TRASH01&quot;,&quot;TRASH02&quot;,&quot;TRASH03&quot;,&quot;TRASH04&quot;,&quot;TRASH05&quot;,&quot;TRASH06&quot;)</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="747706027548487">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="173946650865972" type="System">
+                                    <param id="0" name="Variable">PLAY_AUDIO</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="522494399193658" type="Audio">
+                                    <param id="0" name="Audio file">Tidal Wave</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">VOLUME_WAVE</param>
+                                    <param id="1" name="Tag (optional)">&quot;WAVE&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -757,6 +770,18 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="458529442411970">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="863215545747028" type="Touch">
+                            <param id="0" name="Object">spSoundMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="947849287546784" type="Audio">
+                            <param id="0" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="645971300163824" title="Game Manager">
@@ -803,57 +828,95 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="419656281825390">
+                <event-block sid="246582040300625">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="687126697262572" type="Touch">
-                            <param id="0" name="Object">spPause</param>
+                        <condition id="-14" name="Compare variable" sid="945709554335942" type="System">
+                            <param id="0" name="Variable">GAME_STATUS</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">CT_GAME_STATUS_GAMEOVER</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="119704563744042">
+                        <event-block sid="419656281825390">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="341516886036938" type="System">
-                                    <param id="0" name="First value">timescale</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">TIME_SCALE_NORMAL</param>
+                                <condition id="3" name="On touched object" sid="687126697262572" type="Touch">
+                                    <param id="0" name="Object">spPause</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="561636742725193" type="System">
-                                    <param id="0" name="Variable">GAME_STATUS</param>
-                                    <param id="1" name="Value">CT_GAME_STATUS_PAUSE_ON</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="709139185074379" type="txPaused">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-13" name="Set time scale" sid="428241509248199" type="System">
-                                    <param id="0" name="Time scale">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="167556775493016">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="420246819691570" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="922276274709237" type="System">
-                                    <param id="0" name="Variable">GAME_STATUS</param>
-                                    <param id="1" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="886441877543565" type="txPaused">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-13" name="Set time scale" sid="522680909867196" type="System">
-                                    <param id="0" name="Time scale">TIME_SCALE_NORMAL</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="320264047749877" type="System">
-                                    <param id="0" name="Variable">GAME_STATUS</param>
-                                    <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="119704563744042">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="341516886036938" type="System">
+                                            <param id="0" name="First value">timescale</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">TIME_SCALE_NORMAL</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="561636742725193" type="System">
+                                            <param id="0" name="Variable">GAME_STATUS</param>
+                                            <param id="1" name="Value">CT_GAME_STATUS_PAUSE_ON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="595079142428170" type="spPause">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="709139185074379" type="spPauseHud">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="254095107418307" type="spPlayMenu">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="784881105400964" type="spSoundMenu">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="846924376343579" type="tbPause">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="428241509248199" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="436820699448719">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="523397465800194" type="Touch">
+                            <param id="0" name="Object">spPlayMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="922276274709237" type="System">
+                            <param id="0" name="Variable">GAME_STATUS</param>
+                            <param id="1" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="865384277423154" type="spPause">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="886441877543565" type="spPauseHud">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="565418079200138" type="spPlayMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="734845121400090" type="spSoundMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="136168645830279" type="tbPause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="522680909867196" type="System">
+                            <param id="0" name="Time scale">TIME_SCALE_NORMAL</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="320264047749877" type="System">
+                            <param id="0" name="Variable">GAME_STATUS</param>
+                            <param id="1" name="Value">CT_GAME_STATUS_PLAY</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

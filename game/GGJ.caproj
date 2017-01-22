@@ -85,19 +85,9 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="ALIVE" pingpong="0" repeatcount="1" repeatto="0" sid="347660942474566" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.609649" original-source="G:\SPLIT_FALT.png">
-                            <collision-poly>
-                                <point x="0.433071" y="0.361842" />
-                                <point x="0.498688" y="0.0153509" />
-                                <point x="0.800525" y="0.166667" />
-                                <point x="0.958005" y="0.5" />
-                                <point x="0.519685" y="0.598684" />
-                                <point x="0.498688" y="1" />
-                                <point x="0.181102" y="0.848684" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="ALIVE" pingpong="0" repeatcount="1" repeatto="0" sid="347660942474566" speed="5">
+                        <frame duration="1" hotspotX="0.517155" hotspotY="0.537697" />
+                        <frame duration="1" hotspotX="0.433945" hotspotY="0.515638" />
                     </animation>
                     <animation framecount="3" loop="1" name="DEAD" pingpong="0" repeatcount="1" repeatto="0" sid="634342169996715" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0.61194" />
@@ -142,13 +132,32 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948818656610415" speed="5">
-                        <frame duration="1" hotspotX="0.497758" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.497758" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.511976" hotspotY="0.436709" original-source="C:\Repositorio\GGJ\assets\boto_navegador-32.png">
+                            <collision-poly>
+                                <point x="0.329341" y="0.56962" />
+                                <point x="0.51497" y="0.0696203" />
+                                <point x="0.898204" y="0.151899" />
+                                <point x="0.754491" y="0.436709" />
+                                <point x="0.763473" y="0.436709" />
+                                <point x="0.51497" y="0.987342" />
+                                <point x="0.0419162" y="0.911392" />
+                                <point x="0.344311" y="0.436709" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.511976" hotspotY="0.436709" original-source="C:\Repositorio\GGJ\assets\boto_navegador-32.png">
+                            <collision-poly>
+                                <point x="0.329341" y="0.56962" />
+                                <point x="0.51497" y="0.0696203" />
+                                <point x="0.898204" y="0.151899" />
+                                <point x="0.754491" y="0.436709" />
+                                <point x="0.763473" y="0.436709" />
+                                <point x="0.51497" y="0.987342" />
+                                <point x="0.0419162" y="0.911392" />
+                                <point x="0.344311" y="0.436709" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="txGameOver" sid="985948660735781">
-                <plugin id="Text" />
             </object-type>
             <object-type name="txScore" sid="864605363236679">
                 <plugin id="Text" />
@@ -159,8 +168,62 @@
             <object-type name="txScoreMAX" sid="577678171209649">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="txPaused" sid="821439722708067">
-                <plugin id="Text" />
+            <object-type name="spPauseHud" sid="574507257853128">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720634252784991" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-29.png">
+                            <collision-poly>
+                                <point x="0.0027933" y="0" />
+                                <point x="0.5" y="0.078125" />
+                                <point x="1" y="0" />
+                                <point x="0.994413" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="0.921875" />
+                                <point x="0.0027933" y="1" />
+                                <point x="0.0111732" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spScore" sid="438873376654200">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="252300086966135" speed="5">
+                        <frame duration="1" hotspotX="0.502591" hotspotY="0.504065" original-source="C:\Repositorio\GGJ\assets\placa-21.png">
+                            <collision-poly>
+                                <point x="0.118557" y="0.185484" />
+                                <point x="0.5" y="0" />
+                                <point x="0.902062" y="0.153226" />
+                                <point x="0.979381" y="0.5" />
+                                <point x="0.902062" y="0.846774" />
+                                <point x="0.5" y="0.983871" />
+                                <point x="0.108247" y="0.830645" />
+                                <point x="0.0206186" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spGameOver" sid="436327668874205">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128302411384434" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\GAME_OVER-41.png">
+                            <collision-poly>
+                                <point x="0.152174" y="0.152727" />
+                                <point x="0.5" y="0.00181818" />
+                                <point x="0.853261" y="0.147273" />
+                                <point x="0.998188" y="0.5" />
+                                <point x="0.855072" y="0.854545" />
+                                <point x="0.5" y="0.998182" />
+                                <point x="0.141304" y="0.858182" />
+                                <point x="0.00181159" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="LevelObjects">
@@ -321,6 +384,10 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="tbPause" sid="339451316540241">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Repositorio\GGJ\assets\bg_blur-40-40.png" />
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="tbMenu" sid="279473669799146">
@@ -360,8 +427,30 @@
             <object-type name="spPause" sid="680004046247218">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591043279104737" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="591043279104737" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Repositorio\GGJ\assets\botões-10.png">
+                            <collision-poly>
+                                <point x="0.0135135" y="0.0175439" />
+                                <point x="0.972973" y="0.0350877" />
+                                <point x="0.986486" y="0.982456" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0135135" y="0.982456" />
+                                <point x="0" y="0.491228" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="855822157770892" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\botões-09-press.png">
+                            <collision-poly>
+                                <point x="0.0135135" y="0.0178571" />
+                                <point x="0.5" y="0" />
+                                <point x="0.972973" y="0.0357143" />
+                                <point x="0.986486" y="0.982143" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0135135" y="0.982143" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -398,11 +487,80 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spPlayMenu" sid="453606800613428">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="602022887617987" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502994" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-26.png">
+                            <collision-poly>
+                                <point x="0.155172" y="0.161677" />
+                                <point x="0.5" y="0.0179641" />
+                                <point x="0.867816" y="0.137725" />
+                                <point x="0.965517" y="0.497006" />
+                                <point x="0.87931" y="0.874251" />
+                                <point x="0.5" y="0.988024" />
+                                <point x="0.137931" y="0.856287" />
+                                <point x="0.0287356" y="0.497006" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="659651890382859" speed="5">
+                        <frame duration="1" hotspotX="0.50289" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-25.png">
+                            <collision-poly>
+                                <point x="0.156069" y="0.162651" />
+                                <point x="0.49711" y="0.0180723" />
+                                <point x="0.867052" y="0.138554" />
+                                <point x="0.982659" y="0.5" />
+                                <point x="0.884393" y="0.879518" />
+                                <point x="0.49711" y="0.993976" />
+                                <point x="0.138728" y="0.855422" />
+                                <point x="0.0289017" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spSoundMenu" sid="454086020452698">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="624581984121144" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-28.png">
+                            <collision-poly>
+                                <point x="0.155172" y="0.162651" />
+                                <point x="0.5" y="0.0180723" />
+                                <point x="0.867816" y="0.138554" />
+                                <point x="0.965517" y="0.5" />
+                                <point x="0.87931" y="0.873494" />
+                                <point x="0.5" y="0.993976" />
+                                <point x="0.137931" y="0.855422" />
+                                <point x="0.0287356" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="692715579113754" speed="5">
+                        <frame duration="1" hotspotX="0.505747" hotspotY="0.502994" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-27.png">
+                            <collision-poly>
+                                <point x="0.156069" y="0.162651" />
+                                <point x="0.49711" y="0.0180723" />
+                                <point x="0.867052" y="0.138554" />
+                                <point x="0.982659" y="0.5" />
+                                <point x="0.884393" y="0.879518" />
+                                <point x="0.49711" y="0.993976" />
+                                <point x="0.138728" y="0.855422" />
+                                <point x="0.0289017" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
             <members>
+                <member>spPause</member>
+                <member>spPlayMenu</member>
+                <member>spSoundMenu</member>
                 <member>spStart</member>
             </members>
         </family>
