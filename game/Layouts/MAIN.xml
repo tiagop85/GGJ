@@ -241,28 +241,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spPauseHud" uid="32">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>640</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>358</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -514,13 +492,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>214.42980957</x>
-                        <y>359.573303223</y>
+                        <x>205</x>
+                        <y>358</y>
                         <z>0</z>
                         <width>96</width>
                         <height>96</height>
                         <depth>0</depth>
-                        <hotspotX>0.517154813</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.537696779</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -761,6 +739,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="spPauseHud" uid="32">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>640</x>
+                        <y>128</y>
+                        <z>0</z>
+                        <width>358</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -774,6 +774,8 @@
             </properties>
             <instance-variables>
                 <MAX_SCORE>0</MAX_SCORE>
+                <PLAYING_MUSIC_MENU>0</PLAYING_MUSIC_MENU>
+                <PLAYING_MUSIC_GAME>0</PLAYING_MUSIC_GAME>
             </instance-variables>
         </instance>
     </nonworld-instances>

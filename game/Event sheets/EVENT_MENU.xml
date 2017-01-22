@@ -44,6 +44,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="848135977943365" type="System">
+                                    <param id="0" name="Seconds">0.75</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="746845270803814" type="Audio" />
                                 <action id="-2" name="Go to layout" sid="417154303316276" type="System">
                                     <param id="0" name="Layout">MAIN</param>
                                 </action>
@@ -62,13 +66,39 @@
                         <condition id="-2" name="On start of layout" sid="897152020480433" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="303830759007756" type="Audio">
-                            <param id="0" name="Audio file">Untitled_Rhythm</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;MUSIC_MENU&quot;</param>
+                        <action id="4" name="Preload" sid="386752200321656" type="Audio">
+                            <param id="0" name="Audio file">Surf_Inspector</param>
+                        </action>
+                        <action id="4" name="Preload" sid="595523194669525" type="Audio">
+                            <param id="0" name="Audio file">Tidal Wave</param>
+                        </action>
+                        <action id="4" name="Preload" sid="308772380614785" type="Audio">
+                            <param id="0" name="Audio file">paddle</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="248290539171091">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="217199817346078" type="System">
+                                    <param id="0" name="First value">arControl.PLAYING_MUSIC_MENU</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="725649241727981" type="arControl">
+                                    <param id="0" name="Instance variable">PLAYING_MUSIC_MENU</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="675793327309046" type="Audio">
+                                    <param id="0" name="Audio file">Untitled_Rhythm</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;MUSIC_MENU&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="447599087558200">
                     <conditions>
