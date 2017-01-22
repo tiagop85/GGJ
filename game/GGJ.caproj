@@ -160,7 +160,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720634252784991" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-29.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\icones_tp_modif-55.png">
                             <collision-poly>
                                 <point x="0.0027933" y="0" />
                                 <point x="0.5" y="0.078125" />
@@ -469,7 +469,7 @@
             </object-type>
             <object-type name="tbGameTitle" sid="825605619568028">
                 <plugin id="TiledBg" />
-                <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_principal_export-40.png" />
+                <texture original-source="C:\Users\duuh\Desktop\GGJ\assets\menu_princ-58.png" />
             </object-type>
         </object-folder>
         <object-folder name="Splash">
