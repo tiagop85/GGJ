@@ -376,6 +376,47 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Repositorio\GGJ\assets\bg_blur-40-40.png" />
             </object-type>
+            <object-type name="spWaves" sid="456403571470248">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="WaterBackground">
+                        <effect id="waterbg" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898133015474237" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\river_bg-03.png">
+                            <collision-poly>
+                                <point x="0.166406" y="0.295833" />
+                                <point x="0.832812" y="0.297222" />
+                                <point x="0.844531" y="0.723611" />
+                                <point x="0.5" y="0.736111" />
+                                <point x="0.155469" y="0.723611" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spBackground2" sid="794899693808854">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="WaterBackground">
+                        <effect id="waterbg" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455188713981961" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\pos\Nova pasta\river_bg-02.png">
+                            <collision-poly>
+                                <point x="0.00078125" y="0.00138889" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-type name="tbMenu" sid="279473669799146">
@@ -572,26 +613,6 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="spBackground2" sid="794899693808854">
-            <plugin id="Sprite" />
-            <effects>
-                <effect-type name="WaterBackground">
-                    <effect id="waterbg" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455188713981961" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\pos\Nova pasta\river_bg-02.png">
-                        <collision-poly>
-                            <point x="0.00078125" y="0.00138889" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="spBackground3" sid="994393423477051">
             <plugin id="Sprite" />
             <effects>
