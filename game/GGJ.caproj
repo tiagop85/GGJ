@@ -132,30 +132,8 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948818656610415" speed="5">
-                        <frame duration="1" hotspotX="0.511976" hotspotY="0.436709" original-source="C:\Repositorio\GGJ\assets\boto_navegador-32.png">
-                            <collision-poly>
-                                <point x="0.329341" y="0.56962" />
-                                <point x="0.51497" y="0.0696203" />
-                                <point x="0.898204" y="0.151899" />
-                                <point x="0.754491" y="0.436709" />
-                                <point x="0.763473" y="0.436709" />
-                                <point x="0.51497" y="0.987342" />
-                                <point x="0.0419162" y="0.911392" />
-                                <point x="0.344311" y="0.436709" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.511976" hotspotY="0.436709" original-source="C:\Repositorio\GGJ\assets\boto_navegador-32.png">
-                            <collision-poly>
-                                <point x="0.329341" y="0.56962" />
-                                <point x="0.51497" y="0.0696203" />
-                                <point x="0.898204" y="0.151899" />
-                                <point x="0.754491" y="0.436709" />
-                                <point x="0.763473" y="0.436709" />
-                                <point x="0.51497" y="0.987342" />
-                                <point x="0.0419162" y="0.911392" />
-                                <point x="0.344311" y="0.436709" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -604,7 +582,10 @@
         <file name="Tidal Wave.m4a" />
         <file name="Tidal Wave.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="Surf_Inspector.ogg" />
+        <file name="Untitled_Rhythm.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

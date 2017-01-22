@@ -146,6 +146,9 @@
                                 <action id="-15" name="Set visible" sid="390706319563158" type="spGameOver">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="658415605856360" type="tbPause">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="349889454412253" type="spRightWay">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -174,6 +177,9 @@
                             <param id="1" name="Value">CT_GAME_STATUS_GAMEOVER</param>
                         </action>
                         <action id="-15" name="Set visible" sid="825015818941904" type="spGameOver">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="769117884897559" type="tbPause">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="633971926639242" type="System">
@@ -667,6 +673,15 @@
                         <action id="4" name="Preload" sid="118648829800682" type="Audio">
                             <param id="0" name="Audio file">paddle</param>
                         </action>
+                        <action id="6" name="Stop" sid="457834305875096" type="Audio">
+                            <param id="0" name="Tag">&quot;MUSIC_MENU&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="799667895842804" type="Audio">
+                            <param id="0" name="Audio file">Surf_Inspector</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MUSIC_GAME&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="222758723580750">
@@ -792,6 +807,9 @@
                     </conditions>
                     <actions>
                         <action id="-21" name="Reset global variables" sid="343552588766687" type="System" />
+                        <action id="-15" name="Set visible" sid="658370966857502" type="tbPause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="0" name="Set text" sid="954630917841104" type="txScore">
                             <param id="0" name="Text">GAME_SCORE</param>
                         </action>

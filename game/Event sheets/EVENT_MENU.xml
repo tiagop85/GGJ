@@ -57,6 +57,19 @@
         </event-group>
         <event-group description="" sid="240400750754608" title="Splash Manager">
             <sub-events>
+                <event-block sid="946848080616482">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="897152020480433" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="303830759007756" type="Audio">
+                            <param id="0" name="Audio file">Untitled_Rhythm</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MUSIC_MENU&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="447599087558200">
                     <conditions>
                         <condition behavior="Fade" id="0" name="On fade-out finished" sid="491309853775135" type="tbSplashSponsor" />
