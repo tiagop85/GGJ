@@ -605,6 +605,37 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spConfig" sid="970921347068339">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="276723953527233" speed="5">
+                        <frame duration="1" hotspotX="0.493333" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\eng_02-39.png">
+                            <collision-poly>
+                                <point x="0.0266667" y="0.0517241" />
+                                <point x="0.493333" y="0.0344828" />
+                                <point x="0.96" y="0.0517241" />
+                                <point x="0.986667" y="0.982759" />
+                                <point x="0.493333" y="0.982759" />
+                                <point x="0.0266667" y="0.948276" />
+                                <point x="0.0133333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="812158518063615" speed="5">
+                        <frame duration="1" hotspotX="0.493333" hotspotY="0.5" original-source="C:\Users\duuh\Desktop\GGJ\assets\eng_01-38.png">
+                            <collision-poly>
+                                <point x="0.0266667" y="0.0517241" />
+                                <point x="0.493333" y="0.0344828" />
+                                <point x="0.96" y="0.0517241" />
+                                <point x="0.973333" y="0.965517" />
+                                <point x="0.493333" y="0.982759" />
+                                <point x="0.0266667" y="0.948276" />
+                                <point x="0.0133333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="spBackground3" sid="994393423477051">
             <plugin id="Sprite" />
@@ -699,6 +730,7 @@
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
             <members>
                 <member>spClose</member>
+                <member>spConfig</member>
                 <member>spExit</member>
                 <member>spPause</member>
                 <member>spPlayMenu</member>
@@ -711,6 +743,7 @@
         <layout>SPLASH.xml</layout>
         <layout>MENU.xml</layout>
         <layout>MAIN.xml</layout>
+        <layout>CREDITS.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EVENT_GAME.xml</event-sheet>
