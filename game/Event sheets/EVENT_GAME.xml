@@ -146,6 +146,9 @@
                                 <action id="-15" name="Set visible" sid="390706319563158" type="spGameOver">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="297760545673723" type="spPause">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="658415605856360" type="tbPause">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -178,6 +181,9 @@
                         </action>
                         <action id="-15" name="Set visible" sid="825015818941904" type="spGameOver">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="628657079787097" type="spPause">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="769117884897559" type="tbPause">
                             <param id="0" name="Visibility">1</param>
@@ -797,6 +803,14 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="285473609827058">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="456918335373584" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="178983666502022" type="Audio" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="645971300163824" title="Game Manager">
@@ -833,6 +847,7 @@
                             <param id="1" name="Type">1</param>
                             <param id="2" name="Tag">&quot;GameStarted&quot;</param>
                         </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="446240931959942" type="spExit" />
                     </actions>
                     <sub-events>
                         <event-block sid="169345074389759">
@@ -880,6 +895,7 @@
                                         <action id="-15" name="Set visible" sid="595079142428170" type="spPause">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
+                                        <action disabled="1" id="-9" name="Destroy" sid="435395393490248" type="spPause" />
                                         <action id="-15" name="Set visible" sid="709139185074379" type="spPauseHud">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
@@ -887,6 +903,15 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="784881105400964" type="spSoundMenu">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="801406641369452" type="System">
+                                            <param id="0" name="Object to create">spExit</param>
+                                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                            <param id="2" name="X">spExit.X</param>
+                                            <param id="3" name="Y">spExit.Y</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="698959709308416" type="spExit">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="846924376343579" type="tbPause">
@@ -912,6 +937,12 @@
                             <param id="0" name="Variable">GAME_STATUS</param>
                             <param id="1" name="Value">CT_GAME_STATUS_PAUSE_OFF</param>
                         </action>
+                        <action disabled="1" id="-3" name="Create object" sid="964835027699174" type="System">
+                            <param id="0" name="Object to create">spPause</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">spPause.X</param>
+                            <param id="3" name="Y">spPause.Y</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="865384277423154" type="spPause">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -922,6 +953,10 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="734845121400090" type="spSoundMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="355262033101973" type="spExit" />
+                        <action id="-15" name="Set visible" sid="864840505817616" type="spExit">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="136168645830279" type="tbPause">
