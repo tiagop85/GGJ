@@ -25,7 +25,10 @@
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Viktor Korsun" id="water">Water</effect>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -327,18 +330,18 @@
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131713884000794" speed="5">
                         <frame duration="1" hotspotX="1" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.0273866" y="0.0175439" />
+                                <point x="0.027378" y="0.0175439" />
                                 <point x="0.304878" y="0.0241228" />
                                 <point x="0.304878" y="0.97807" />
-                                <point x="0.0243453" y="0.984649" />
+                                <point x="0.0243293" y="0.984649" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="1" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.0273866" y="0.0175439" />
+                                <point x="0.027378" y="0.0175439" />
                                 <point x="0.304878" y="0.0241228" />
                                 <point x="0.304878" y="0.97807" />
-                                <point x="0.0243453" y="0.984649" />
+                                <point x="0.0243293" y="0.984649" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -505,7 +508,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="624581984121144" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-28.png">
+                        <frame duration="1" hotspotX="0.502959" hotspotY="0.5" original-source="G:\Global Game Jam\icones\botao_audio_on-41.png">
                             <collision-poly>
                                 <point x="0.155172" y="0.162651" />
                                 <point x="0.5" y="0.0180723" />
@@ -565,6 +568,106 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="spBackground2" sid="794899693808854">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="WaterBackground">
+                    <effect id="waterbg" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455188713981961" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\pos\Nova pasta\river_bg-02.png">
+                        <collision-poly>
+                            <point x="0.00078125" y="0.00138889" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spBackground3" sid="994393423477051">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199332492283069" speed="5">
+                    <frame duration="1" hotspotX="0.501562" hotspotY="0.501188" original-source="G:\onda_effect.png">
+                        <collision-poly>
+                            <point x="0.000783087" y="0.00374639" />
+                            <point x="1" y="0.00236407" />
+                            <point x="1" y="0.997636" />
+                            <point x="0" y="0.997636" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spBackground4" sid="813549387965800">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="351859750196050" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\pos\Nova pasta\river_bg-02.png">
+                        <collision-poly>
+                            <point x="0.00078125" y="0.00138889" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spBackground5" sid="447821669313671">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137240306536032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.03382" original-source="C:\Users\Tiago\Desktop\pos\Nova pasta\river_bg-02.png">
+                        <collision-poly>
+                            <point x="0.00156006" y="0" />
+                            <point x="0.99922" y="0" />
+                            <point x="0.99922" y="1" />
+                            <point x="0.000780031" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spBackground6" sid="119791138432568">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Water">
+                    <effect id="water" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="441792211892876" speed="5">
+                    <frame duration="1" hotspotX="0.501562" hotspotY="0.501188" original-source="G:\onda_effect2.png">
+                        <collision-poly>
+                            <point x="0.000783087" y="0.00374639" />
+                            <point x="1" y="0.00236407" />
+                            <point x="1" y="0.997636" />
+                            <point x="0" y="0.997636" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
@@ -572,7 +675,6 @@
                 <member>spExit</member>
                 <member>spPause</member>
                 <member>spPlayMenu</member>
-                <member>spSoundMenu</member>
                 <member>spStart</member>
             </members>
         </family>
