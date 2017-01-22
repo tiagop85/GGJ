@@ -18,11 +18,18 @@
                         <condition id="4" name="Is touching object" sid="355111372572486" type="Touch">
                             <param id="0" name="Object">allButtons</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="293755437298742" type="allButtons" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="218159322200831" type="allButtons">
                             <param id="0" name="Animation">&quot;pressed&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="987371920610560" type="Audio">
+                            <param id="0" name="Audio file">Button_Press-Marianne_Gagnon-779186363</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                     <sub-events>

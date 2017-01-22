@@ -1025,6 +1025,12 @@
                 <condition id="-9" name="Is visible" sid="694392270452405" type="spSoundMenu" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="851154400880110" type="Audio">
+                    <param id="0" name="Audio file">Button_Press-Marianne_Gagnon-779186363</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="8" name="Set silent" sid="947849287546784" type="Audio">
                     <param id="0" name="Mode">2</param>
                 </action>
@@ -1052,6 +1058,44 @@
                     <actions>
                         <action id="4" name="Set animation" sid="296218182868252" type="spSoundMenu">
                             <param id="0" name="Animation">&quot;pressed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="517525011311024">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="513606004514635" type="System">
+                    <param id="0" name="First value">GAME_STATUS</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">CT_GAME_STATUS_STUCK_TRASH</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="480450395214337" type="System">
+                    <param id="0" name="First value">GAME_STATUS</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">CT_GAME_STATUS_STUCK_SAND</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="851098493800774">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="451936455340669" type="System">
+                            <param id="0" name="First value">spPlayer.AnimationName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;DEAD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="167250009963902" type="Audio">
+                            <param id="0" name="Audio file">Chimpanzee-SoundBible.com-901310467</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;dead&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="969103713504362" type="spPlayer">
+                            <param id="0" name="Animation">&quot;DEAD&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

@@ -96,12 +96,11 @@
                             <image-point name="rastro2" x="0.209205" y="0.801988" />
                             <image-point name="rastro3" x="0.232636" y="0.884838" />
                         </frame>
-                        <frame duration="1" hotspotX="0" hotspotY="0.548605" />
+                        <frame duration="1" hotspotX="0" hotspotY="0.537616" />
                     </animation>
-                    <animation framecount="3" loop="1" name="DEAD" pingpong="0" repeatcount="1" repeatto="0" sid="634342169996715" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.61194" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.564516" />
-                        <frame duration="1" hotspotX="0" hotspotY="0.59322" />
+                    <animation framecount="2" loop="1" name="DEAD" pingpong="0" repeatcount="1" repeatto="0" sid="634342169996715" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.537477" />
+                        <frame duration="1" hotspotX="0" hotspotY="0.537465" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -278,79 +277,29 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="TRASH01" pingpong="0" repeatcount="1" repeatto="0" sid="793904757736238" speed="5">
-                        <frame duration="1" hotspotX="0.501901" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-15.png">
-                            <collision-poly>
-                                <point x="0.163498" y="0.188596" />
-                                <point x="0.498099" y="0.0219298" />
-                                <point x="0.73384" y="0.307018" />
-                                <point x="0.977186" y="0.973684" />
-                                <point x="0.0570342" y="0.934211" />
-                                <point x="0.13308" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="TRASH01" pingpong="0" repeatcount="1" repeatto="0" sid="793904757736238" speed="3">
+                        <frame duration="1" hotspotX="0.488789" hotspotY="0.502222" />
+                        <frame duration="1" hotspotX="0.452282" hotspotY="0.502222" />
                     </animation>
-                    <animation framecount="1" loop="0" name="TRASH02" pingpong="0" repeatcount="1" repeatto="0" sid="714708920205612" speed="5">
-                        <frame duration="1" hotspotX="0.501887" hotspotY="0.502203" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-16.png">
-                            <collision-poly>
-                                <point x="0.498113" y="0.0396476" />
-                                <point x="0.766038" y="0.273128" />
-                                <point x="0.924528" y="0.497797" />
-                                <point x="0.984906" y="0.982379" />
-                                <point x="0.0415094" y="0.951542" />
-                                <point x="0.0943396" y="0.497797" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="TRASH02" pingpong="0" repeatcount="1" repeatto="0" sid="714708920205612" speed="3">
+                        <frame duration="1" hotspotX="0.478431" hotspotY="0.486486" />
+                        <frame duration="1" hotspotX="0.529644" hotspotY="0.486486" />
                     </animation>
-                    <animation framecount="1" loop="0" name="TRASH03" pingpong="0" repeatcount="1" repeatto="0" sid="975564693350384" speed="5">
-                        <frame duration="1" hotspotX="0.501887" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-17.png">
-                            <collision-poly>
-                                <point x="0.132075" y="0.152174" />
-                                <point x="0.498113" y="0.0304348" />
-                                <point x="0.671698" y="0.378261" />
-                                <point x="0.713208" y="0.5" />
-                                <point x="0.988679" y="0.986957" />
-                                <point x="0.045283" y="0.947826" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="TRASH03" pingpong="0" repeatcount="1" repeatto="0" sid="975564693350384" speed="3">
+                        <frame duration="1" hotspotX="0.59375" hotspotY="0.481818" />
+                        <frame duration="1" hotspotX="0.408072" hotspotY="0.481818" />
                     </animation>
-                    <animation framecount="1" loop="0" name="TRASH04" pingpong="0" repeatcount="1" repeatto="0" sid="981552694868117" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-18.png">
-                            <collision-poly>
-                                <point x="0.166667" y="0.192982" />
-                                <point x="0.5" y="0.0833333" />
-                                <point x="0.753788" y="0.285088" />
-                                <point x="0.791667" y="0.5" />
-                                <point x="0.992424" y="0.991228" />
-                                <point x="0.0454545" y="0.947368" />
-                                <point x="0.166667" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="TRASH04" pingpong="0" repeatcount="1" repeatto="0" sid="981552694868117" speed="3">
+                        <frame duration="1" hotspotX="0.534413" hotspotY="0.481818" />
+                        <frame duration="1" hotspotX="0.461538" hotspotY="0.479452" />
                     </animation>
-                    <animation framecount="1" loop="0" name="TRASH05" pingpong="0" repeatcount="1" repeatto="0" sid="685238635524847" speed="5">
-                        <frame duration="1" hotspotX="0.501887" hotspotY="0.5" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-19.png">
-                            <collision-poly>
-                                <point x="0.498113" y="0.10177" />
-                                <point x="0.74717" y="0.29646" />
-                                <point x="0.883019" y="0.5" />
-                                <point x="0.988679" y="0.986726" />
-                                <point x="0.045283" y="0.946903" />
-                                <point x="0.0490566" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="TRASH05" pingpong="0" repeatcount="1" repeatto="0" sid="685238635524847" speed="3">
+                        <frame duration="1" hotspotX="0.588496" hotspotY="0.488789" />
+                        <frame duration="1" hotspotX="0.483471" hotspotY="0.488789" />
                     </animation>
-                    <animation framecount="1" loop="0" name="TRASH06" pingpong="0" repeatcount="1" repeatto="0" sid="619913167377021" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502203" original-source="C:\Users\Tiago\Desktop\_________________POS_FINAL\GGJ\assets\trash-20.png">
-                            <collision-poly>
-                                <point x="0.219697" y="0.255507" />
-                                <point x="0.5" y="0.127753" />
-                                <point x="0.833333" y="0.193833" />
-                                <point x="0.943182" y="0.497797" />
-                                <point x="0.992424" y="0.991189" />
-                                <point x="0.0454545" y="0.947137" />
-                                <point x="0.0454545" y="0.497797" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="1" name="TRASH06" pingpong="0" repeatcount="1" repeatto="0" sid="619913167377021" speed="3">
+                        <frame duration="1" hotspotX="0.53629" hotspotY="0.46729" />
+                        <frame duration="1" hotspotX="0.498039" hotspotY="0.46729" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -531,7 +480,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="986768916325329" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.460938" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_principal_export-38.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.460317" original-source="C:\Users\duuh\Desktop\GGJ\assets\icones_tp_modif-57.png">
                             <collision-poly>
                                 <point x="0.131409" y="0.161443" />
                                 <point x="0.500789" y="0.132994" />
@@ -545,7 +494,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="648129744202122" speed="5">
-                        <frame duration="1" hotspotX="0.491166" hotspotY="0.469231" original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_principal_export-39.png">
+                        <frame duration="1" hotspotX="0.491103" hotspotY="0.472868" original-source="C:\Users\duuh\Desktop\GGJ\assets\icones_tp_modif-56.png">
                             <collision-poly>
                                 <point x="0.129006" y="0.164073" />
                                 <point x="0.491481" y="0.135113" />
@@ -796,6 +745,8 @@
         <file name="stream.ogg" />
         <file name="Tidal Wave.m4a" />
         <file name="Tidal Wave.ogg" />
+        <file name="Chimpanzee-SoundBible.com-901310467.ogg" />
+        <file name="Button_Press-Marianne_Gagnon-779186363.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Surf_Inspector.ogg" />

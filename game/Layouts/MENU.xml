@@ -120,11 +120,11 @@
                         <x>640</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>288</width>
-                        <height>128</height>
+                        <width>285.957458496</width>
+                        <height>126</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.4609375</hotspotY>
+                        <hotspotY>0.460317463</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
