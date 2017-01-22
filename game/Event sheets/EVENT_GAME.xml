@@ -860,12 +860,15 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="395881634810205">
+                        <event-block any="1" sid="395881634810205">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="163553412629109" type="System">
                                     <param id="0" name="First value">arControl.PLAYING_MUSIC_GAME</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="535471243396478" type="Audio">
+                                    <param id="0" name="Tag">&quot;MUSIC_GAME&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -873,9 +876,9 @@
                                     <param id="0" name="Instance variable">PLAYING_MUSIC_GAME</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Play" sid="260858019949800" type="Audio">
+                                <action id="0" name="Play" sid="768981532454749" type="Audio">
                                     <param id="0" name="Audio file">Surf_Inspector</param>
-                                    <param id="2" name="Loop">1</param>
+                                    <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;MUSIC_GAME&quot;</param>
                                 </action>
@@ -1103,7 +1106,7 @@
                         <action id="0" name="Play" sid="167250009963902" type="Audio">
                             <param id="0" name="Audio file">Chimpanzee-SoundBible.com-901310467</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;dead&quot;</param>
                         </action>
                         <action id="4" name="Set animation" sid="969103713504362" type="spPlayer">

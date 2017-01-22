@@ -12,6 +12,14 @@
                     </conditions>
                     <actions>
                         <action id="2" name="Stop" sid="684219105695750" type="allButtons" />
+                        <action id="-27" name="Set effect enabled" sid="368883107351068" type="spWaves">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="142844751110707" type="spBackground2">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="615072466450698">
@@ -223,9 +231,6 @@
                         <condition id="-2" name="On start of layout" sid="897152020480433" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Preload" sid="386752200321656" type="Audio">
-                            <param id="0" name="Audio file">Surf_Inspector</param>
-                        </action>
                         <action id="4" name="Preload" sid="595523194669525" type="Audio">
                             <param id="0" name="Audio file">Tidal Wave</param>
                         </action>
@@ -236,12 +241,15 @@
                         <action id="2" name="Stop" sid="683717566750733" type="spStory" />
                     </actions>
                     <sub-events>
-                        <event-block sid="248290539171091">
+                        <event-block any="1" sid="248290539171091">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="217199817346078" type="System">
                                     <param id="0" name="First value">arControl.PLAYING_MUSIC_MENU</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="692619739022549" type="Audio">
+                                    <param id="0" name="Tag">&quot;MUSIC_MENU&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -249,9 +257,9 @@
                                     <param id="0" name="Instance variable">PLAYING_MUSIC_MENU</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Play" sid="675793327309046" type="Audio">
+                                <action id="0" name="Play" sid="544002215987469" type="Audio">
                                     <param id="0" name="Audio file">Untitled_Rhythm</param>
-                                    <param id="2" name="Loop">1</param>
+                                    <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;MUSIC_MENU&quot;</param>
                                 </action>
