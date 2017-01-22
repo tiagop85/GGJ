@@ -445,11 +445,11 @@
         <object-folder name="Menu">
             <object-type name="tbMenu" sid="279473669799146">
                 <plugin id="TiledBg" />
-                <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-30.png" />
+                <texture original-source="C:\Repositorio\GGJ\assets\TELA_INICIAL_e_credito-02.png" />
             </object-type>
             <object-type name="tbGameTitle" sid="825605619568028">
                 <plugin id="TiledBg" />
-                <texture original-source="C:\Users\duuh\Desktop\GGJ\assets\menu_princ-58.png" />
+                <texture original-source="C:\Repositorio\GGJ\assets\TELA_INICIAL_e_credito-01.png" />
             </object-type>
         </object-folder>
         <object-folder name="Splash">
