@@ -117,6 +117,37 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spArrow" sid="571964785085981">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="553656045048200">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763147445118878" speed="5">
+                        <frame duration="1" hotspotX="0.513043" hotspotY="0.503968" original-source="C:\Users\duuh\Desktop\GGJ\assets\seta_madeira-33.png">
+                            <collision-poly>
+                                <point x="0.26087" y="0.896825" />
+                                <point x="0.26087" y="0.503968" />
+                                <point x="0.304348" y="0.130952" />
+                                <point x="0.504348" y="0.031746" />
+                                <point x="0.73913" y="0.119048" />
+                                <point x="0.747826" y="0.892857" />
+                                <point x="0.504348" y="0.988095" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="txTap" sid="221199757522478">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="264780543589537">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
         <object-folder name="Hud">
             <object-type name="spDiv" sid="653700133294543">
