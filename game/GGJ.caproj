@@ -312,10 +312,6 @@
                         <frame duration="1" hotspotX="0.488789" hotspotY="0.502222" />
                         <frame duration="1" hotspotX="0.452282" hotspotY="0.502222" />
                     </animation>
-                    <animation framecount="2" loop="1" name="TRASH02" pingpong="0" repeatcount="1" repeatto="0" sid="714708920205612" speed="3">
-                        <frame duration="1" hotspotX="0.478431" hotspotY="0.486486" />
-                        <frame duration="1" hotspotX="0.529644" hotspotY="0.486486" />
-                    </animation>
                     <animation framecount="2" loop="1" name="TRASH03" pingpong="0" repeatcount="1" repeatto="0" sid="975564693350384" speed="3">
                         <frame duration="1" hotspotX="0.59375" hotspotY="0.481818" />
                         <frame duration="1" hotspotX="0.408072" hotspotY="0.481818" />
