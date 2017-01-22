@@ -769,6 +769,14 @@
                 <member>spStart</member>
             </members>
         </family>
+        <family name="allTexts" plugin-id="Text" sid="672620620750040">
+            <members>
+                <member>txScore</member>
+                <member>txScoreLabel</member>
+                <member>txScoreMAX</member>
+                <member>txTap</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>SPLASH.xml</layout>

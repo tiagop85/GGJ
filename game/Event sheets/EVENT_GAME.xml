@@ -70,6 +70,9 @@
                                 <action id="-15" name="Set visible" sid="784320902588651" type="spPauseHud">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="252008469080875" type="spExit">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="553075507634379" type="spPlayMenu">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -132,6 +135,9 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="912182670667748" type="spPauseHud">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="750595219079083" type="spExit">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="943619959262022" type="spPlayMenu">
@@ -809,7 +815,7 @@
                 <action id="0" name="Set text" sid="347596281430148" type="txScoreMAX">
                     <param id="0" name="Text">arControl.MAX_SCORE</param>
                 </action>
-                <action id="5" name="Set web font" sid="652054935100252" type="txScore">
+                <action id="5" name="Set web font" sid="652054935100252" type="allTexts">
                     <param id="0" name="Family name">&quot;ventura_eddingmedium&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
