@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EVENT_GAME</name>
     <events>
+        <include>EVENT_MENU</include>
         <variable constant="0" name="SPEED_PLAYER" sid="460587208817183" static="0" type="number">6</variable>
         <variable constant="0" name="SPEED_WAVE1" sid="328454233105574" static="0" type="number">25</variable>
         <variable constant="0" name="SPEED_WAVE_2" sid="495390608239009" static="0" type="number">600</variable>

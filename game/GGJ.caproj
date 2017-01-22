@@ -133,9 +133,10 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948818656610415" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" />
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948818656610415" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -533,11 +534,42 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spExit" sid="187460868982843">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="615726736063242" speed="5">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.508772" original-source="C:\Repositorio\GGJ\assets\botões-12.png">
+                            <collision-poly>
+                                <point x="0.0133333" y="0.0175439" />
+                                <point x="0.493333" y="0.0175439" />
+                                <point x="0.96" y="0.0526316" />
+                                <point x="0.986667" y="0.982456" />
+                                <point x="0.493333" y="1" />
+                                <point x="0.0133333" y="0.982456" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="862257721401766" speed="5">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\botões-11-press.png">
+                            <collision-poly>
+                                <point x="0.0133333" y="0.0178571" />
+                                <point x="0.493333" y="0" />
+                                <point x="0.96" y="0.0535714" />
+                                <point x="0.986667" y="0.982143" />
+                                <point x="0.493333" y="1" />
+                                <point x="0.0133333" y="0.982143" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
             <members>
+                <member>spExit</member>
                 <member>spPause</member>
                 <member>spPlayMenu</member>
                 <member>spSoundMenu</member>
