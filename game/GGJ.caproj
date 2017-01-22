@@ -327,6 +327,10 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_pause-30.png" />
             </object-type>
+            <object-type name="tbGameTitle" sid="825605619568028">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\Aecio\Documents\GGJ\Telas\tela_principal_export-40.png" />
+            </object-type>
         </object-folder>
         <object-folder name="Splash">
             <object-type name="tbSplashBg" sid="487414668866880">
