@@ -663,6 +663,127 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="spJump" sid="763288171604527">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="604764042602132" speed="5">
+                        <frame duration="1" hotspotX="0.502304" hotspotY="0.50505" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-07.png">
+                            <collision-poly>
+                                <point x="0.00460829" y="0.010101" />
+                                <point x="0.497696" y="0.0808081" />
+                                <point x="0.97235" y="0.0606061" />
+                                <point x="0.990783" y="0.979798" />
+                                <point x="0.497696" y="0.929293" />
+                                <point x="0.00921659" y="0.979798" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="685074687289465" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-08.png">
+                            <collision-poly>
+                                <point x="0.00458716" y="0.0102041" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.96789" y="0.0714286" />
+                                <point x="0.990826" y="0.979592" />
+                                <point x="0.5" y="0.928571" />
+                                <point x="0.00917431" y="0.979592" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spNext" sid="952160267715971">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="253606840874659" speed="5">
+                        <frame duration="1" hotspotX="0.502283" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-05.png">
+                            <collision-poly>
+                                <point x="0.00913242" y="0.02" />
+                                <point x="0.497717" y="0.08" />
+                                <point x="0.968037" y="0.07" />
+                                <point x="0.986301" y="0.97" />
+                                <point x="0.497717" y="0.92" />
+                                <point x="0.0136986" y="0.97" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="739556185919256" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-06.png">
+                            <collision-poly>
+                                <point x="0.00909091" y="0.02" />
+                                <point x="0.5" y="0.09" />
+                                <point x="0.968182" y="0.07" />
+                                <point x="0.986364" y="0.97" />
+                                <point x="0.5" y="0.93" />
+                                <point x="0.0136364" y="0.97" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spBegin" sid="894439972328416">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="unpressed" pingpong="0" repeatcount="1" repeatto="0" sid="926533108227627" speed="5">
+                        <frame duration="1" hotspotX="0.502304" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\lets_surf-09.png">
+                            <collision-poly>
+                                <point x="0.00460829" y="0.0102041" />
+                                <point x="0.497696" y="0.0714286" />
+                                <point x="0.97235" y="0.0612245" />
+                                <point x="0.990783" y="0.979592" />
+                                <point x="0.497696" y="0.928571" />
+                                <point x="0.00921659" y="0.979592" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="pressed" pingpong="0" repeatcount="1" repeatto="0" sid="487236160854369" speed="5">
+                        <frame duration="1" hotspotX="0.502304" hotspotY="0.5" original-source="C:\Repositorio\GGJ\assets\lets_surf-10.png">
+                            <collision-poly>
+                                <point x="0.00460829" y="0.0102041" />
+                                <point x="0.497696" y="0.0816327" />
+                                <point x="0.97235" y="0.0612245" />
+                                <point x="0.995392" y="0.989796" />
+                                <point x="0.497696" y="0.938776" />
+                                <point x="0.00921659" y="0.979592" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Story">
+            <object-type name="tbBlack" sid="446532337172218">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="spStory" sid="647447803197702">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="291100650074675">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="678971331780686" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-01.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-02.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-03.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Repositorio\GGJ\assets\Histórinha\historinha-04.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="HISTORY1" pingpong="0" repeatcount="1" repeatto="0" sid="369519676380348" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="HISTORY2" pingpong="0" repeatcount="1" repeatto="0" sid="865104334344044" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="HISTORY3" pingpong="0" repeatcount="1" repeatto="0" sid="504559664950006" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="HISTORY4" pingpong="0" repeatcount="1" repeatto="0" sid="498036565636338" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="spBackground3" sid="994393423477051">
             <plugin id="Sprite" />
@@ -752,13 +873,24 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="spTemp" sid="696517507969775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327759626701882" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="allButtons" plugin-id="Sprite" sid="453039054115299">
             <members>
+                <member>spBegin</member>
                 <member>spClose</member>
                 <member>spConfig</member>
                 <member>spExit</member>
+                <member>spJump</member>
+                <member>spNext</member>
                 <member>spPause</member>
                 <member>spPlayMenu</member>
                 <member>spRestart</member>
@@ -779,6 +911,7 @@
         <layout>MENU.xml</layout>
         <layout>MAIN.xml</layout>
         <layout>CREDITS.xml</layout>
+        <layout>STORY.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EVENT_GAME.xml</event-sheet>
