@@ -790,14 +790,14 @@
                     <param id="0" name="Text">arControl.MAX_SCORE</param>
                 </action>
                 <action id="5" name="Set web font" sid="652054935100252" type="txScore">
+                    <param id="0" name="Family name">&quot;ventura_eddingmedium&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action disabled="1" id="5" name="Set web font" sid="362684729767745" type="txScoreMAX">
                     <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
                     <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
                 </action>
-                <action id="5" name="Set web font" sid="362684729767745" type="txScoreMAX">
-                    <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
-                    <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
-                </action>
-                <action id="5" name="Set web font" sid="402025850274912" type="txScoreLabel">
+                <action disabled="1" id="5" name="Set web font" sid="402025850274912" type="txScoreLabel">
                     <param id="0" name="Family name">&quot;Press Start 2P&quot;</param>
                     <param id="1" name="CSS URL">&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot;</param>
                 </action>
@@ -970,7 +970,7 @@
                 <action id="0" name="Spawn another object" sid="620688664503417" type="spPlayer">
                     <param id="0" name="Object">spr_rastro</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">&quot;origin&quot;</param>
+                    <param id="2" name="Image point">&quot;rastro1&quot;</param>
                 </action>
             </actions>
         </event-block>
