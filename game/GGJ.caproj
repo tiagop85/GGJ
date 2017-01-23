@@ -44,7 +44,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">Off</prop>
-        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Loader style">Percentage text</prop>
         <prop name="Orientations">Landscape</prop>

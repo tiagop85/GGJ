@@ -54,11 +54,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>620</x>
-                        <y>369</y>
+                        <x>640</x>
+                        <y>360</y>
                         <z>0</z>
-                        <width>1505</width>
-                        <height>2123</height>
+                        <width>1280</width>
+                        <height>720</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -68,7 +68,7 @@
                 </instance>
                 <instance type="spTimer" uid="28">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -270,8 +270,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>413</x>
-                        <y>866</y>
+                        <x>372</x>
+                        <y>868</y>
                         <z>0</z>
                         <width>96.418945313</width>
                         <height>97.283683777</height>
@@ -522,8 +522,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>300</x>
-                        <y>1024.412841797</y>
+                        <x>296</x>
+                        <y>1049</y>
                         <z>0</z>
                         <width>164</width>
                         <height>472</height>
