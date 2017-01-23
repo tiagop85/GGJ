@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1485114650,
+	"version": 1485201886,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -62,6 +62,10 @@
 		"media/chimpanzee-soundbible.com-901310467.ogg",
 		"media/button_press-marianne_gagnon-779186363.ogg",
 		"media/monkey chimpanzee sound effect.ogg",
+		"media/button_press-marianne_gagnon-779186363.m4a",
+		"media/chimpanzee-soundbible.com-901310467.m4a",
+		"media/monkey chimpanzeesound_effect.m4a",
+		"media/paddle.m4a",
 		"media/surf_inspector.ogg",
 		"media/untitled_rhythm.ogg",
 		"icon-16.png",

@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1485114650
+#1485201886
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -61,6 +61,10 @@ media/tidal%20wave.ogg
 media/chimpanzee-soundbible.com-901310467.ogg
 media/button_press-marianne_gagnon-779186363.ogg
 media/monkey%20chimpanzee%20sound%20effect.ogg
+media/button_press-marianne_gagnon-779186363.m4a
+media/chimpanzee-soundbible.com-901310467.m4a
+media/monkey%20chimpanzeesound_effect.m4a
+media/paddle.m4a
 media/surf_inspector.ogg
 media/untitled_rhythm.ogg
 icon-16.png
